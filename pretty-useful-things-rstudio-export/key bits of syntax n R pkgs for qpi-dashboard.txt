@@ -1,0 +1,126 @@
+# Notes - key R pkgs re qpi dash
+
+across!!! -  start testing this 
+https://dplyr.tidyverse.org/reference/across.html 
+
+cross_join()
+
+paste0 
+
+~ 
+
+readworkbook
+
+ 
+
+packages.R lists the main ones: 
+
+library(readr)
+
+library(dplyr)
+
+library(forcats)
+
+library(lubridate)
+lppl
+library(purrr)
+
+library(tidyr)
+
+library(stringr)
+
+library(openxlsx) 
+
+ 
+
+in qpi name changes script, see cross_join() and filter(between()): 
+
+qpi_name_changes <- qpi_name_changes |> 
+
+  cross_join(all_years) |> 
+
+  filter(between(Cyear, first_cyear, last_cyear)) |> 
+
+  mutate(Cancer = tsg) |> 
+
+  select(Cancer, old_qpi_name, new_qpi_name, Cyear)
+
+mutate(QPI = case_when(
+
+    !is.na(new_qpi_name) ~ new_qpi_name,
+
+    TRUE ~ QPI
+
+  )) |> 
+
+  select(-new_qpi_name)
+
+mutate(QPI = case_when(
+
+    !is.na(new_qpi_name) ~ new_qpi_name,
+
+    TRUE ~ QPI
+
+  )) |> 
+
+  select(-new_qpi_name)
+
+write.xlsx
+
+ 
+
+map() / map2() 
+
+ungroup() 
+
+arrange() 
+
+list_rbind() 
+
+date_start_str <- date_start %m+% years(i-1) |> 
+
+      format("%d/%m/%Y")
+
+    
+
+    date_end_str <- date_start %m+% years(i) |> 
+
+      format("%d/%m/%Y")
+
+# Sex value to handle sex specific cancers
+
+tsg_sex <- case_when(
+
+  tsg %in% c("Breast", "Cervical", "Endometrial", "Ovarian") ~ "female",
+
+  tsg %in% c("Prostate", "Testicular") ~ "male",
+
+  TRUE ~ "both"
+
+) 
+
+In hb hosp qpi: 
+
+new_data <- new_data |> 
+
+  mutate(rag_status = case_when(
+
+    direction == "H" & (per_performance >= current_target) ~ "1",
+
+    direction == "H" & per_performance > 0 & (per_performance < current_target) ~ "2",
+
+    direction == "H" & per_performance == 0  & Denominator <= 0 ~ "3",
+
+    direction == "H" & per_performance == 0 & Denominator > 0 ~ "2",
+
+    direction == "L" & per_performance > 0 & per_performance <= current_target ~ "1",
+
+    direction == "L" & per_performance > current_target ~ "2",
+
+    direction == "L" & per_performance == 0 & Denominator <= 0 ~ "3",
+
+    direction == "L" & per_performance == 0 & Denominator > 0 ~ "1",
+
+    TRUE ~ "unknown")) 
+
+ 
