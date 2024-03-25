@@ -1,13 +1,16 @@
 # A script for processing core information about Scottish Health Boards 
 # inc population, HB names, hospitals, boundaries 
 # in a re-useable way. 
-# 
+# What does the style guide say? 
+# as per https://public-health-scotland.github.io/knowledge-base/docs/R
 
-library(tidyverse)
+
+library(readr)
 
 # Get data 
 
-# Maybe try using phsopendata::get_dataset()
+# Maybe try using phsopendata::get_dataset() 
+# as per https://public-health-scotland.github.io/knowledge-base/docs/R?doc=Recommended%20R%20Packages.md
 
 # Get HB geographical codes and names from opendata.nhs just the CSV file 
 # https://www.opendata.nhs.scot/dataset/9f942fdb-e59e-44f5-b534-d6e17229cc7b/resource/652ff726-e676-4a20-abda-435b98dd7bdc/download/hb14_hb19.csv

@@ -1,0 +1,39 @@
+# Style Guide and Github guidance 
+
+## PHS STYLE 
+
+Do use The DSKB R style guide: 
+https://public-health-scotland.github.io/knowledge-base/docs/R?doc=R%20Style%20Guide.md 
+
+... and do use the DSKB Recommended R packages: 
+https://public-health-scotland.github.io/knowledge-base/docs/R?doc=Recommended%20R%20Packages.md 
+
+ in preference over technical-docs (and deffo not R-Resources) . 
+
+
+Ultimate authority: 
+
+DSKB Data Science Knowledge Base
+https://public-health-scotland.github.io/knowledge-base/ 
+
+... for documentation, textbooks, in-person courses and online courses. 
+
+Don't use the old R-Resources one on gh. 
+"Warning This repository has been archived and is no longer maintained. All documentation has moved to (and maintained on) the technical-docs repo and now available on the PHS Data Science Knowledge Base. Please see these resources for up-to-date guidance." 
+
+
+
+## Tidyverse R style guide
+https://style.tidyverse.org/ 
+
+## Those recommended packages from the DSKB
+
+
+# GitHub guidance 
+
+•	GitHub Guidance from PHS: 
+PHS Data Science - Knowledge Base (public-health-scotland.github.io) 
+https://public-health-scotland.github.io/knowledge-base/docs/Version Control?doc=GitHub%20Guidance.md 
+
+•	Creating a pull request - GitHub Docs 
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request 
