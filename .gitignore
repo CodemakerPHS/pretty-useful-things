@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 
+# Ignore data ie do not save any data files to GitHub
+data/
