@@ -1,5 +1,5 @@
 ---
-title: "Exploring QPI data"
+title: "Exploring data"
 author: "PW"
 date: "2024-04-10"
 output: html_document
@@ -15,8 +15,8 @@ Identify targets that have changed since the beginning of data gathering.
 
 
 
-```{r HB_hosp_qpi}
-summary(tbl_hb_hosp_qpi)
+```{r qpi_years}
+summary(tbl_qpi_years)
 ```
 
 ## Including Plots
