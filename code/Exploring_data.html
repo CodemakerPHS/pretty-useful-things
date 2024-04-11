@@ -367,11 +367,10 @@ pre code {
 <h2>Changed Targets</h2>
 <p>Identify targets that have changed since the beginning of data
 gathering.</p>
-<pre class="r"><code># Get hb_hosp file from:  
-# \Benchmarking\Cancer QPIs\Data\new_process\testing\test_bladder_24\excels_for_tableau\initial_run\input
-# tbl_hb_hosp_qpi &lt;- 
+<pre class="r"><code># Get background data 
 tbl_background_data_age_gender &lt;- read_excel(&quot;/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/test_bladder_24/excels_for_tableau/initial_run/input/Background_Data_Age_Gender.xlsx&quot;, 
     sheet = &quot;Background_Data_Age_Gender&quot;)
+
 summary(tbl_background_data_age_gender)</code></pre>
 <pre><code>##    Cancer_C            Year_C             Age_C            Location_C       
 ##  Length:37231       Length:37231       Length:37231       Length:37231      
@@ -389,6 +388,29 @@ summary(tbl_background_data_age_gender)</code></pre>
 ##  3rd Qu.:14.000                      3rd Qu.: 15.00  
 ##  Max.   :18.000                      Max.   :873.00  
 ##                                      NA&#39;s   :21</code></pre>
+<pre class="r"><code># Get case ascertainment data 
+tbl_background_data_case &lt;- read_excel(&quot;/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/test_bladder_24/excels_for_tableau/initial_run/input/Background_Data_Case.xlsx&quot;, 
+    sheet = &quot;Background_Data_Case&quot;)
+
+summary(tbl_background_data_case)</code></pre>
+<pre><code>##    Cancer_D            Year_D           Location_D         Audit_Cases    
+##  Length:2123        Length:2123        Length:2123        Min.   :   0.0  
+##  Class :character   Class :character   Class :character   1st Qu.:  29.0  
+##  Mode  :character   Mode  :character   Mode  :character   Median : 104.0  
+##                                                           Mean   : 330.6  
+##                                                           3rd Qu.: 326.0  
+##                                                           Max.   :5192.0  
+##  Cancer_Reg_Avg   Per_Case_Ascertainment   Network            Ord_Loc_D     
+##  Min.   :   0.0   Min.   :   0.00        Length:2123        Min.   : 1.000  
+##  1st Qu.:  30.8   1st Qu.:  85.43        Class :character   1st Qu.: 5.000  
+##  Median : 107.2   Median :  96.13        Mode  :character   Median : 9.000  
+##  Mean   : 346.1   Mean   :  98.89                           Mean   : 9.498  
+##  3rd Qu.: 332.0   3rd Qu.: 107.22                           3rd Qu.:14.000  
+##  Max.   :5364.8   Max.   :1500.00                           Max.   :18.000</code></pre>
+<pre class="r"><code># Get hb_hosp file from:  
+# \Benchmarking\Cancer QPIs\Data\new_process\testing\test_bladder_24\excels_for_tableau\initial_run\input 
+
+# tbl_hb_hosp_qpi &lt;- </code></pre>
 </div>
 <div id="including-plots" class="section level2">
 <h2>Including Plots</h2>
