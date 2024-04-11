@@ -25,7 +25,9 @@ library(readxl)
 tbl_background_data_age_gender <- read_excel("/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/pw_hosp_data_exploration/input/Background_Data_Age_Gender.xlsx", 
                                              sheet = "Background_Data_Age_Gender")
 
-summary(tbl_background_data_age_gender)
+summary(tbl_background_data_age_gender) 
+
+unique(tbl_background_data_age_gender$Year_C)
 
 # Get case ascertainment data 
 tbl_background_data_case <- read_excel("/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/pw_hosp_data_exploration/input/Background_Data_Case.xlsx", 
