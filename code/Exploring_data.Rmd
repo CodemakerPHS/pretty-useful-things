@@ -22,7 +22,7 @@ Identify targets that have changed since the beginning of data gathering.
 # tbl_hb_hosp_qpi <- 
 tbl_background_data_age_gender <- read_excel("/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/test_bladder_24/excels_for_tableau/initial_run/input/Background_Data_Age_Gender.xlsx", 
     sheet = "Background_Data_Age_Gender")
-summary(tbl_qpi_years)
+summary(tbl_background_data_age_gender)
 ```
 
 ## Including Plots
