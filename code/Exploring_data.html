@@ -410,7 +410,1926 @@ summary(tbl_background_data_case)</code></pre>
 <pre class="r"><code># Get hb_hosp file from:  
 # \Benchmarking\Cancer QPIs\Data\new_process\testing\test_bladder_24\excels_for_tableau\initial_run\input 
 
-# tbl_hb_hosp_qpi &lt;- </code></pre>
+tbl_hb_hosp_qpi &lt;- read_excel(&quot;/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/test_bladder_24/excels_for_tableau/initial_run/input/HB_Hosp_QPI.xlsx&quot;, 
+    sheet = &quot;HB_Hosp_QPI&quot;, col_types = c(&quot;text&quot;, 
+        &quot;text&quot;, &quot;text&quot;, &quot;text&quot;, &quot;text&quot;, &quot;text&quot;, 
+        &quot;numeric&quot;, &quot;numeric&quot;, &quot;numeric&quot;, 
+        &quot;numeric&quot;, &quot;numeric&quot;, &quot;numeric&quot;, 
+        &quot;text&quot;, &quot;text&quot;, &quot;numeric&quot;, &quot;text&quot;, 
+        &quot;text&quot;, &quot;text&quot;, &quot;numeric&quot;, &quot;text&quot;, 
+        &quot;text&quot;, &quot;text&quot;, &quot;text&quot;, &quot;text&quot;, &quot;text&quot;, 
+        &quot;skip&quot;, &quot;numeric&quot;, &quot;numeric&quot;))</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15477 / R15477C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15478 / R15478C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15479 / R15479C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15480 / R15480C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15481 / R15481C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15482 / R15482C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15483 / R15483C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15484 / R15484C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15485 / R15485C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15486 / R15486C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15487 / R15487C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15488 / R15488C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15489 / R15489C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15490 / R15490C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15491 / R15491C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15492 / R15492C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15493 / R15493C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15494 / R15494C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15495 / R15495C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15496 / R15496C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15497 / R15497C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15498 / R15498C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15499 / R15499C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15500 / R15500C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15501 / R15501C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15502 / R15502C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15503 / R15503C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15504 / R15504C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15505 / R15505C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15506 / R15506C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15507 / R15507C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15508 / R15508C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15509 / R15509C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15510 / R15510C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15511 / R15511C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15512 / R15512C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15513 / R15513C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15514 / R15514C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15515 / R15515C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15516 / R15516C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15517 / R15517C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15518 / R15518C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15519 / R15519C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15520 / R15520C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15521 / R15521C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15522 / R15522C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15523 / R15523C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15524 / R15524C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15525 / R15525C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15526 / R15526C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15527 / R15527C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15528 / R15528C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15529 / R15529C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15530 / R15530C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15531 / R15531C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15532 / R15532C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15533 / R15533C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15534 / R15534C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15535 / R15535C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15536 / R15536C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15537 / R15537C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15538 / R15538C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15539 / R15539C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15540 / R15540C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15541 / R15541C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15542 / R15542C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15543 / R15543C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15544 / R15544C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15545 / R15545C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15546 / R15546C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15547 / R15547C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15548 / R15548C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15549 / R15549C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15550 / R15550C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15551 / R15551C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15552 / R15552C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15553 / R15553C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15554 / R15554C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15555 / R15555C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15556 / R15556C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15557 / R15557C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15558 / R15558C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15559 / R15559C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15560 / R15560C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15561 / R15561C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15562 / R15562C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15563 / R15563C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15564 / R15564C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15565 / R15565C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15566 / R15566C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15567 / R15567C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15568 / R15568C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15569 / R15569C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15570 / R15570C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15571 / R15571C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15572 / R15572C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15573 / R15573C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15574 / R15574C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15575 / R15575C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15576 / R15576C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15577 / R15577C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15578 / R15578C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15579 / R15579C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15580 / R15580C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15581 / R15581C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15582 / R15582C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15583 / R15583C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15584 / R15584C28: got &#39;All NSCLC patients&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15585 / R15585C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15586 / R15586C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15587 / R15587C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15588 / R15588C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15589 / R15589C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15590 / R15590C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15591 / R15591C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15592 / R15592C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15593 / R15593C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15594 / R15594C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15595 / R15595C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15596 / R15596C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15597 / R15597C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15598 / R15598C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15599 / R15599C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15600 / R15600C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15601 / R15601C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15602 / R15602C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15603 / R15603C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15604 / R15604C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15605 / R15605C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15606 / R15606C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15607 / R15607C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15608 / R15608C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15609 / R15609C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15610 / R15610C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15611 / R15611C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15612 / R15612C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15613 / R15613C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15614 / R15614C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15615 / R15615C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15616 / R15616C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15617 / R15617C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15618 / R15618C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15619 / R15619C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15620 / R15620C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15621 / R15621C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15622 / R15622C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15623 / R15623C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15624 / R15624C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15625 / R15625C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15626 / R15626C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15627 / R15627C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15628 / R15628C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15629 / R15629C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15630 / R15630C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15631 / R15631C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15632 / R15632C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15633 / R15633C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15634 / R15634C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15635 / R15635C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15636 / R15636C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15637 / R15637C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15638 / R15638C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15639 / R15639C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15640 / R15640C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15641 / R15641C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15642 / R15642C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15643 / R15643C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15644 / R15644C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15645 / R15645C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15646 / R15646C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15647 / R15647C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15648 / R15648C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15649 / R15649C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15650 / R15650C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15651 / R15651C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15652 / R15652C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15653 / R15653C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15654 / R15654C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15655 / R15655C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15656 / R15656C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15657 / R15657C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15658 / R15658C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15659 / R15659C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15660 / R15660C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15661 / R15661C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15662 / R15662C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15663 / R15663C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15664 / R15664C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15665 / R15665C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15666 / R15666C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15667 / R15667C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15668 / R15668C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15669 / R15669C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15670 / R15670C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15671 / R15671C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15672 / R15672C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15673 / R15673C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15674 / R15674C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15675 / R15675C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15676 / R15676C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15677 / R15677C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15678 / R15678C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15679 / R15679C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15680 / R15680C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15681 / R15681C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15682 / R15682C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15683 / R15683C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15684 / R15684C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15685 / R15685C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15686 / R15686C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15687 / R15687C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15688 / R15688C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15689 / R15689C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15690 / R15690C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15691 / R15691C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15692 / R15692C28: got &#39;NSCLC: Stage IIIB and
+## IV&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15711 / R15711C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15712 / R15712C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15713 / R15713C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15714 / R15714C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15715 / R15715C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15716 / R15716C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15717 / R15717C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15718 / R15718C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15719 / R15719C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15720 / R15720C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15721 / R15721C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15722 / R15722C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15723 / R15723C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15724 / R15724C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15725 / R15725C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15726 / R15726C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15727 / R15727C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15728 / R15728C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15729 / R15729C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15730 / R15730C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15731 / R15731C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15732 / R15732C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15733 / R15733C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15734 / R15734C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15735 / R15735C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15736 / R15736C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15737 / R15737C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15738 / R15738C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15739 / R15739C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15740 / R15740C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15741 / R15741C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15742 / R15742C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15743 / R15743C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15744 / R15744C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15745 / R15745C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15746 / R15746C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15747 / R15747C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15748 / R15748C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15749 / R15749C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15750 / R15750C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15751 / R15751C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15752 / R15752C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15753 / R15753C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15754 / R15754C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15755 / R15755C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15756 / R15756C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15757 / R15757C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15758 / R15758C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15759 / R15759C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15760 / R15760C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15761 / R15761C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15762 / R15762C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15763 / R15763C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15764 / R15764C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15765 / R15765C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15766 / R15766C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15767 / R15767C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15768 / R15768C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15769 / R15769C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15770 / R15770C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15771 / R15771C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15772 / R15772C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15773 / R15773C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15774 / R15774C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15775 / R15775C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15776 / R15776C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15777 / R15777C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15778 / R15778C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15779 / R15779C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15780 / R15780C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15781 / R15781C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15782 / R15782C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15783 / R15783C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15784 / R15784C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15785 / R15785C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15786 / R15786C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15787 / R15787C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15788 / R15788C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15789 / R15789C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15790 / R15790C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15791 / R15791C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15792 / R15792C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15793 / R15793C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15794 / R15794C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15795 / R15795C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15796 / R15796C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15797 / R15797C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15798 / R15798C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15799 / R15799C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15800 / R15800C28: got &#39;Number of patients with
+## SCLC who receive chemotherapy ± radiotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15801 / R15801C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15802 / R15802C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15803 / R15803C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15804 / R15804C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15805 / R15805C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15806 / R15806C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15807 / R15807C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15808 / R15808C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15809 / R15809C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15810 / R15810C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15811 / R15811C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15812 / R15812C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15813 / R15813C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15814 / R15814C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15815 / R15815C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15816 / R15816C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15817 / R15817C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15818 / R15818C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15819 / R15819C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15820 / R15820C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15821 / R15821C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15822 / R15822C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15823 / R15823C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15824 / R15824C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15825 / R15825C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15826 / R15826C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15827 / R15827C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15828 / R15828C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15829 / R15829C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15830 / R15830C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15831 / R15831C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15832 / R15832C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15833 / R15833C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15834 / R15834C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15835 / R15835C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15836 / R15836C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15837 / R15837C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15838 / R15838C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15839 / R15839C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15840 / R15840C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15841 / R15841C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15842 / R15842C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15843 / R15843C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15844 / R15844C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15845 / R15845C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15846 / R15846C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15847 / R15847C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15848 / R15848C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15849 / R15849C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15850 / R15850C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15851 / R15851C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15852 / R15852C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15853 / R15853C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15854 / R15854C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15855 / R15855C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15856 / R15856C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15857 / R15857C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15858 / R15858C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15859 / R15859C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15860 / R15860C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15861 / R15861C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15862 / R15862C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15863 / R15863C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15864 / R15864C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15865 / R15865C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15866 / R15866C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15867 / R15867C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15868 / R15868C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15869 / R15869C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15870 / R15870C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15871 / R15871C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15872 / R15872C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15873 / R15873C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15874 / R15874C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15875 / R15875C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15876 / R15876C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15877 / R15877C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15878 / R15878C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15879 / R15879C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15880 / R15880C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15881 / R15881C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15882 / R15882C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15883 / R15883C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15884 / R15884C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15885 / R15885C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15886 / R15886C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15887 / R15887C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15888 / R15888C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15889 / R15889C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB15890 / R15890C28: got &#39;Number of patients with
+## SCLC not undergoing treatment with curative intent who receive palliative
+## chemotherapy&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26115 / R26115C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26116 / R26116C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26117 / R26117C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26118 / R26118C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26119 / R26119C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26120 / R26120C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26121 / R26121C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26122 / R26122C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26123 / R26123C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26124 / R26124C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26125 / R26125C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26126 / R26126C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26127 / R26127C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26128 / R26128C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26129 / R26129C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26130 / R26130C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26131 / R26131C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26132 / R26132C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26133 / R26133C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26134 / R26134C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26135 / R26135C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26136 / R26136C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26137 / R26137C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26138 / R26138C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26139 / R26139C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26140 / R26140C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26141 / R26141C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26142 / R26142C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26143 / R26143C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26144 / R26144C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26145 / R26145C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26146 / R26146C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26147 / R26147C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26148 / R26148C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26149 / R26149C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26150 / R26150C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26151 / R26151C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26152 / R26152C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26153 / R26153C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26154 / R26154C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26155 / R26155C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26156 / R26156C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26157 / R26157C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26158 / R26158C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26159 / R26159C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26160 / R26160C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26161 / R26161C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26162 / R26162C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26163 / R26163C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26164 / R26164C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26165 / R26165C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26166 / R26166C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26167 / R26167C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26168 / R26168C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26169 / R26169C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26170 / R26170C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26171 / R26171C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26172 / R26172C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26173 / R26173C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26174 / R26174C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26175 / R26175C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26176 / R26176C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26177 / R26177C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26178 / R26178C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26179 / R26179C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26180 / R26180C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26181 / R26181C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26182 / R26182C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26183 / R26183C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26184 / R26184C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26185 / R26185C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26186 / R26186C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26187 / R26187C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26188 / R26188C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26189 / R26189C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26190 / R26190C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26191 / R26191C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26192 / R26192C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26193 / R26193C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26194 / R26194C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26195 / R26195C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26196 / R26196C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26197 / R26197C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26198 / R26198C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26199 / R26199C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26200 / R26200C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26201 / R26201C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26202 / R26202C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26203 / R26203C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26204 / R26204C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26205 / R26205C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26206 / R26206C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26207 / R26207C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26208 / R26208C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26209 / R26209C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26210 / R26210C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26211 / R26211C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26212 / R26212C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26213 / R26213C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26214 / R26214C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26215 / R26215C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26216 / R26216C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26217 / R26217C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26218 / R26218C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26219 / R26219C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26220 / R26220C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26221 / R26221C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26222 / R26222C28: got &#39;Proportion of patients
+## with lung cancer who have a pathological diagnosis&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26223 / R26223C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26224 / R26224C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26225 / R26225C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26226 / R26226C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26227 / R26227C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26228 / R26228C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26229 / R26229C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26230 / R26230C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26231 / R26231C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26232 / R26232C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26233 / R26233C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26234 / R26234C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26235 / R26235C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26236 / R26236C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26237 / R26237C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26238 / R26238C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26239 / R26239C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26240 / R26240C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26241 / R26241C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26242 / R26242C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26243 / R26243C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26244 / R26244C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26245 / R26245C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26246 / R26246C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26247 / R26247C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26248 / R26248C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26249 / R26249C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26250 / R26250C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26251 / R26251C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26252 / R26252C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26253 / R26253C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26254 / R26254C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26255 / R26255C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26256 / R26256C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26257 / R26257C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26258 / R26258C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26259 / R26259C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26260 / R26260C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26261 / R26261C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26262 / R26262C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26263 / R26263C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26264 / R26264C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26265 / R26265C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26266 / R26266C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26267 / R26267C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26268 / R26268C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26269 / R26269C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26270 / R26270C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26271 / R26271C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26272 / R26272C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26273 / R26273C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26274 / R26274C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26275 / R26275C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26276 / R26276C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26277 / R26277C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26278 / R26278C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26279 / R26279C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26280 / R26280C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26281 / R26281C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26282 / R26282C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26283 / R26283C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26284 / R26284C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26285 / R26285C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26286 / R26286C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26287 / R26287C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26288 / R26288C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26289 / R26289C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26290 / R26290C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26291 / R26291C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26292 / R26292C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26293 / R26293C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26294 / R26294C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26295 / R26295C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26296 / R26296C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26297 / R26297C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26298 / R26298C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26299 / R26299C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26300 / R26300C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26301 / R26301C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26302 / R26302C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26303 / R26303C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26304 / R26304C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26305 / R26305C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26306 / R26306C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26307 / R26307C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26308 / R26308C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26309 / R26309C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26310 / R26310C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26311 / R26311C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26312 / R26312C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26313 / R26313C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26314 / R26314C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26315 / R26315C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26316 / R26316C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26317 / R26317C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26318 / R26318C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26319 / R26319C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26320 / R26320C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26321 / R26321C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26322 / R26322C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26323 / R26323C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26324 / R26324C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26325 / R26325C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26326 / R26326C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26327 / R26327C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26328 / R26328C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26329 / R26329C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26330 / R26330C28: got &#39;Proportion of patients
+## with a pathological diagnosis of NSCLC who have a tumour subtype identified&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26331 / R26331C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26332 / R26332C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26333 / R26333C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26334 / R26334C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26335 / R26335C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26336 / R26336C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26337 / R26337C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26338 / R26338C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26339 / R26339C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26340 / R26340C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26341 / R26341C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26342 / R26342C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26343 / R26343C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26344 / R26344C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26345 / R26345C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26346 / R26346C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26347 / R26347C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26348 / R26348C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26349 / R26349C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26350 / R26350C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26351 / R26351C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26352 / R26352C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26353 / R26353C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26354 / R26354C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26355 / R26355C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26356 / R26356C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26357 / R26357C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26358 / R26358C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26359 / R26359C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26360 / R26360C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26361 / R26361C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26362 / R26362C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26363 / R26363C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26364 / R26364C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26365 / R26365C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26366 / R26366C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26367 / R26367C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26368 / R26368C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26369 / R26369C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26370 / R26370C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26371 / R26371C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26372 / R26372C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26373 / R26373C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26374 / R26374C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26375 / R26375C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26376 / R26376C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26377 / R26377C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26378 / R26378C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26379 / R26379C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26380 / R26380C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26381 / R26381C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26382 / R26382C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26383 / R26383C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26384 / R26384C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26385 / R26385C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26386 / R26386C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26387 / R26387C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26388 / R26388C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26389 / R26389C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26390 / R26390C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26391 / R26391C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26392 / R26392C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26393 / R26393C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26394 / R26394C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26395 / R26395C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26396 / R26396C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26397 / R26397C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26398 / R26398C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26399 / R26399C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26400 / R26400C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26401 / R26401C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26402 / R26402C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26403 / R26403C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26404 / R26404C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26405 / R26405C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26406 / R26406C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26407 / R26407C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26408 / R26408C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26409 / R26409C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26410 / R26410C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26411 / R26411C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26412 / R26412C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26413 / R26413C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26414 / R26414C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26415 / R26415C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26416 / R26416C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26417 / R26417C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26418 / R26418C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26419 / R26419C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26420 / R26420C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26421 / R26421C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26422 / R26422C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26423 / R26423C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26424 / R26424C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26425 / R26425C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26426 / R26426C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26427 / R26427C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26428 / R26428C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26429 / R26429C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26430 / R26430C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26431 / R26431C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26432 / R26432C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26433 / R26433C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26434 / R26434C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26435 / R26435C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26436 / R26436C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26437 / R26437C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26438 / R26438C28: got &#39;Proportion of patients
+## with a pathological diagnosis of Stage IIIB or IV , NSCLC who have molecular
+## profiling undertaken&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26655 / R26655C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26656 / R26656C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26657 / R26657C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26658 / R26658C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26659 / R26659C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26660 / R26660C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26661 / R26661C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26662 / R26662C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26663 / R26663C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26664 / R26664C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26665 / R26665C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26666 / R26666C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26667 / R26667C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26668 / R26668C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26669 / R26669C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26670 / R26670C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26671 / R26671C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26672 / R26672C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26673 / R26673C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26674 / R26674C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26675 / R26675C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26676 / R26676C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26677 / R26677C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26678 / R26678C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26679 / R26679C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26680 / R26680C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26681 / R26681C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26682 / R26682C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26683 / R26683C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26684 / R26684C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26685 / R26685C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26686 / R26686C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26687 / R26687C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26688 / R26688C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26689 / R26689C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26690 / R26690C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26691 / R26691C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26692 / R26692C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26693 / R26693C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26694 / R26694C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26695 / R26695C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26696 / R26696C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26697 / R26697C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26698 / R26698C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26699 / R26699C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26700 / R26700C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26701 / R26701C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26702 / R26702C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26703 / R26703C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26704 / R26704C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26705 / R26705C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26706 / R26706C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26707 / R26707C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26708 / R26708C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26709 / R26709C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26710 / R26710C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26711 / R26711C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26712 / R26712C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26713 / R26713C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26714 / R26714C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26715 / R26715C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26716 / R26716C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26717 / R26717C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26718 / R26718C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26719 / R26719C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26720 / R26720C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26721 / R26721C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26722 / R26722C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26723 / R26723C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26724 / R26724C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26725 / R26725C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26726 / R26726C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26727 / R26727C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26728 / R26728C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26729 / R26729C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26730 / R26730C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26731 / R26731C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26732 / R26732C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26733 / R26733C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26734 / R26734C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26735 / R26735C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26736 / R26736C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26737 / R26737C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26738 / R26738C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26739 / R26739C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26740 / R26740C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26741 / R26741C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26742 / R26742C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26743 / R26743C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26744 / R26744C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26745 / R26745C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26746 / R26746C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26747 / R26747C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26748 / R26748C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26749 / R26749C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26750 / R26750C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26751 / R26751C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26752 / R26752C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26753 / R26753C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26754 / R26754C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26755 / R26755C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26756 / R26756C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26757 / R26757C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26758 / R26758C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26759 / R26759C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26760 / R26760C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26761 / R26761C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26762 / R26762C28: got &#39;Proportion of NSCLC who
+## undergo surgery&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26763 / R26763C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26764 / R26764C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26765 / R26765C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26766 / R26766C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26767 / R26767C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26768 / R26768C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26769 / R26769C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26770 / R26770C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26771 / R26771C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26772 / R26772C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26773 / R26773C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26774 / R26774C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26775 / R26775C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26776 / R26776C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26777 / R26777C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26778 / R26778C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26779 / R26779C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26780 / R26780C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26781 / R26781C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26782 / R26782C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26783 / R26783C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26784 / R26784C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26785 / R26785C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26786 / R26786C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26787 / R26787C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26788 / R26788C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26789 / R26789C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26790 / R26790C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26791 / R26791C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26792 / R26792C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26793 / R26793C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26794 / R26794C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26795 / R26795C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26796 / R26796C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26797 / R26797C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26798 / R26798C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26799 / R26799C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26800 / R26800C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26801 / R26801C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26802 / R26802C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26803 / R26803C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26804 / R26804C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26805 / R26805C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26806 / R26806C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26807 / R26807C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26808 / R26808C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26809 / R26809C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26810 / R26810C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26811 / R26811C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26812 / R26812C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26813 / R26813C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26814 / R26814C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26815 / R26815C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26816 / R26816C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26817 / R26817C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26818 / R26818C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26819 / R26819C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26820 / R26820C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26821 / R26821C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26822 / R26822C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26823 / R26823C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26824 / R26824C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26825 / R26825C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26826 / R26826C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26827 / R26827C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26828 / R26828C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26829 / R26829C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26830 / R26830C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26831 / R26831C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26832 / R26832C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26833 / R26833C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26834 / R26834C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26835 / R26835C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26836 / R26836C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26837 / R26837C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26838 / R26838C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26839 / R26839C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26840 / R26840C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26841 / R26841C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26842 / R26842C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26843 / R26843C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26844 / R26844C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26845 / R26845C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26846 / R26846C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26847 / R26847C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26848 / R26848C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26849 / R26849C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26850 / R26850C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26851 / R26851C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26852 / R26852C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26853 / R26853C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26854 / R26854C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26855 / R26855C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26856 / R26856C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26857 / R26857C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26858 / R26858C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26859 / R26859C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26860 / R26860C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26861 / R26861C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26862 / R26862C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26863 / R26863C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26864 / R26864C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26865 / R26865C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26866 / R26866C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26867 / R26867C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26868 / R26868C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26869 / R26869C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre><code>## Warning: Expecting numeric in AB26870 / R26870C28: got &#39;NSCLC: Stage I-II&#39;</code></pre>
+<pre class="r"><code>summary(tbl_hb_hosp_qpi)</code></pre>
+<pre><code>##  Board_Hospital        Cyear               QPI              SurgDiag        
+##  Length:52494       Length:52494       Length:52494       Length:52494      
+##  Class :character   Class :character   Class :character   Class :character  
+##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+##                                                                             
+##                                                                             
+##                                                                             
+##                                                                             
+##     Cancer            Location          Denominator     NRforDenominator 
+##  Length:52494       Length:52494       Min.   :   0.0   Min.   :  0.000  
+##  Class :character   Class :character   1st Qu.:   1.0   1st Qu.:  0.000  
+##  Mode  :character   Mode  :character   Median :  13.0   Median :  0.000  
+##                                        Mean   :  78.9   Mean   :  0.981  
+##                                        3rd Qu.:  57.0   3rd Qu.:  0.000  
+##                                        Max.   :5283.6   Max.   :324.000  
+##                                                                          
+##  NRforExclusion     NRforNumerator      Numerator       PerPerformance  
+##  Min.   :  0.0000   Min.   :  0.000   Min.   :   0.00   Min.   :  0.00  
+##  1st Qu.:  0.0000   1st Qu.:  0.000   1st Qu.:   0.00   1st Qu.:  0.00  
+##  Median :  0.0000   Median :  0.000   Median :   2.00   Median : 10.53  
+##  Mean   :  0.7535   Mean   :  0.776   Mean   :  46.95   Mean   : 37.64  
+##  3rd Qu.:  0.0000   3rd Qu.:  0.000   3rd Qu.:  21.00   3rd Qu.: 86.67  
+##  Max.   :576.0000   Max.   :557.000   Max.   :4845.00   Max.   :277.78  
+##                                                                         
+##   Cyear_Abr           Year_Lk            QPI_Order      Numerator1       
+##  Length:52494       Length:52494       Min.   : 1.00   Length:52494      
+##  Class :character   Class :character   1st Qu.: 6.00   Class :character  
+##  Mode  :character   Mode  :character   Median :13.00   Mode  :character  
+##                                        Mean   :14.44                     
+##                                        3rd Qu.:25.00                     
+##                                        Max.   :35.00                     
+##                                        NA&#39;s   :10208                     
+##  Denominator1       Exclusions1        Current_Target   Target_Label      
+##  Length:52494       Length:52494       Min.   :  0.99   Length:52494      
+##  Class :character   Class :character   1st Qu.:  5.00   Class :character  
+##  Mode  :character   Mode  :character   Median : 60.00   Mode  :character  
+##                                        Mean   : 48.74                     
+##                                        3rd Qu.: 90.00                     
+##                                        Max.   :100.00                     
+##                                                                           
+##   Direction         QPI_Label_Short      Network          Direction_Text    
+##  Length:52494       Length:52494       Length:52494       Length:52494      
+##  Class :character   Class :character   Class :character   Class :character  
+##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+##                                                                             
+##                                                                             
+##                                                                             
+##                                                                             
+##   RAG_Status        Previous_Target    QPI_Subtitle  
+##  Length:52494       Min.   :  0.000   Min.   : NA    
+##  Class :character   1st Qu.:  0.000   1st Qu.: NA    
+##  Mode  :character   Median :  0.000   Median : NA    
+##                     Mean   :  2.592   Mean   :NaN    
+##                     3rd Qu.:  0.000   3rd Qu.: NA    
+##                     Max.   :100.000   Max.   : NA    
+##                     NA&#39;s   :2003      NA&#39;s   :52494</code></pre>
 </div>
 <div id="including-plots" class="section level2">
 <h2>Including Plots</h2>
