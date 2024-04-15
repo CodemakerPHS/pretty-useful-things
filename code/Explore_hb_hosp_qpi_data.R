@@ -6,12 +6,12 @@
 
 library(readxl)
 library(dplyr) 
-# officer 
+library(officer)  
 # and flextable? 
 
 
 # Get background data 
-tbl_background_data_age_gender <- read_excel("/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/pw_hosp_data_exploration/input/Background_Data_Age_Gender.xlsx", 
+tbl_background_data_age_gender <- readxl::read_xlsx("/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/pw_hosp_data_exploration/input/Background_Data_Age_Gender.xlsx", 
                                              sheet = "Background_Data_Age_Gender")
 
 summary(tbl_background_data_age_gender) 
@@ -21,23 +21,29 @@ unique(tbl_background_data_age_gender$Year_C)
 tbl_background_data_age_gender |> count(Year_C)
 
 # Get case ascertainment data 
-tbl_background_data_case <- read_excel("/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/pw_hosp_data_exploration/input/Background_Data_Case.xlsx", 
+tbl_background_data_case <- readxl::read_xlsx("/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/pw_hosp_data_exploration/input/Background_Data_Case.xlsx", 
                                        sheet = "Background_Data_Case")
 
 summary(tbl_background_data_case)
 
 # Get hb_hosp file from:  
 # previously.. \Benchmarking\Cancer QPIs\Data\new_process\testing\test_bladder_24\excels_for_tableau\initial_run\input 
+# readxl::read_xlsx to unmask (because of officer) 
+# skip HB_comments column 
+# set final column ie QPI_subtitle to text not numeric
+tbl_hb_hosp_qpi <- readxl::read_xlsx("/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/pw_hosp_data_exploration/input/HB_Hosp_QPI.xlsx", 
+                              sheet = "HB_Hosp_QPI", 
+                              col_types = c("text", 
+                                            "text", "text", "text", "text", "text", 
+                                            "numeric", "numeric", "numeric", 
+                                            "numeric", "numeric", "numeric", 
+                                            "text", "text", "numeric", "text", 
+                                            "text", "text", "numeric", "text", 
+                                            "text", "text", "text", "text", "text", 
+                                            "skip", "numeric", "text")
+                              )
 
-tbl_hb_hosp_qpi <- read_excel("/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/pw_hosp_data_exploration/input/HB_Hosp_QPI.xlsx", 
-                              sheet = "HB_Hosp_QPI", col_types = c("text", 
-                                                                   "text", "text", "text", "text", "text", 
-                                                                   "numeric", "numeric", "numeric", 
-                                                                   "numeric", "numeric", "numeric", 
-                                                                   "text", "text", "numeric", "text", 
-                                                                   "text", "text", "numeric", "text", 
-                                                                   "text", "text", "text", "text", "text", 
-                                                                   "skip", "numeric", "numeric"))
+
 
 summary(tbl_hb_hosp_qpi)
 
