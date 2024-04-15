@@ -5,6 +5,8 @@
 # Importing and exploring hb hosp qpi and associated background data. 
 
 library(readxl)
+library(dplyr)
+
 
 # Get background data 
 tbl_background_data_age_gender <- read_excel("/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/pw_hosp_data_exploration/input/Background_Data_Age_Gender.xlsx", 
@@ -14,6 +16,8 @@ summary(tbl_background_data_age_gender)
 
 unique(tbl_background_data_age_gender$Year_C)
 
+tbl_background_data_age_gender |> count(Year_C)
+
 # Get case ascertainment data 
 tbl_background_data_case <- read_excel("/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/pw_hosp_data_exploration/input/Background_Data_Case.xlsx", 
                                        sheet = "Background_Data_Case")
@@ -21,7 +25,7 @@ tbl_background_data_case <- read_excel("/conf/quality_indicators/Benchmarking/Ca
 summary(tbl_background_data_case)
 
 # Get hb_hosp file from:  
-# \Benchmarking\Cancer QPIs\Data\new_process\testing\test_bladder_24\excels_for_tableau\initial_run\input 
+# previously.. \Benchmarking\Cancer QPIs\Data\new_process\testing\test_bladder_24\excels_for_tableau\initial_run\input 
 
 tbl_hb_hosp_qpi <- read_excel("/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/pw_hosp_data_exploration/input/HB_Hosp_QPI.xlsx", 
                               sheet = "HB_Hosp_QPI", col_types = c("text", 
