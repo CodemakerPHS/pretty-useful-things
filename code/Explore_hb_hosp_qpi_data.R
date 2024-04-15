@@ -47,4 +47,17 @@ tbl_hb_hosp_qpi <- readxl::read_xlsx("/conf/quality_indicators/Benchmarking/Canc
 
 summary(tbl_hb_hosp_qpi)
 
+tbl_targets <- tbl_hb_hosp_qpi |> 
+  select(Cancer, Cyear, QPI_Label_Short,QPI,  Current_Target, Target_Label, Direction) |> 
+  distinct()
 
+tbl_changed_targets <- tbl_targets |> 
+  mutate(change_in_target = "not yet compared") 
+
+# Looks like the simple way to do this comparison is with a for loop 
+# https://stackoverflow.com/questions/57742819/whats-a-tidyverse-approach-to-iterating-over-rows-in-a-data-frame-when-vectoris 
+# Quick way - use excel
+
+for (i in 1:nrow(tbl_changed_targets)) {
+  tbl_changed_targets[i, "change_in_target"] = "still not yet compared"
+}
