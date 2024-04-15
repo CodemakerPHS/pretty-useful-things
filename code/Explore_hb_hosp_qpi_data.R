@@ -7,6 +7,7 @@
 library(readxl)
 library(dplyr) 
 library(officer)  
+library(tibble)
 # and flextable? 
 
 
@@ -58,6 +59,21 @@ tbl_changed_targets <- tbl_targets |>
 # https://stackoverflow.com/questions/57742819/whats-a-tidyverse-approach-to-iterating-over-rows-in-a-data-frame-when-vectoris 
 # Quick way - use excel
 
+tsg_names <- unique(tbl_hb_hosp_qpi$Cancer)
+tbl_tsg_characteristics <- tibble(tsg_names)
+tbl_tsg_characteristics <- add_column(tbl_tsg_characteristics, maxi_target = 0.0)
+
+# NEEDS FURTHER WORK - FOR ROW, IF THE TGT IS > THE CORRES MAX FOR THAT TSG / QPI COMBO, 
+# THEN SET NEW FLAG CHANGED TO YES, AND KEEP/ADD TO CHANGED TBL
+for (i in 1:nrow(tsg_names)) {
+  if (tbl_changed_targets[i, "Current_Target"] > tbl_tsg_characteristics[i] ) {
+    tbl_tsg_characteristics[i, ] <-  
+  }
+  }
+
 for (i in 1:nrow(tbl_changed_targets)) {
   tbl_changed_targets[i, "change_in_target"] = "still not yet compared"
+  if (as.numeric(tbl_changed_targets$Current_Target) != max(tbl_changed_targets[])
 }
+
+
