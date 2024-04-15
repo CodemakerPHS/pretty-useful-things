@@ -5,7 +5,9 @@
 # Importing and exploring hb hosp qpi and associated background data. 
 
 library(readxl)
-library(dplyr)
+library(dplyr) 
+# officer 
+# and flextable? 
 
 
 # Get background data 
