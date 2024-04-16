@@ -8,6 +8,7 @@ library(readxl)
 library(dplyr) 
 library(officer)  
 library(tibble)
+library(stringr)
 # and flextable? 
 
 
@@ -57,9 +58,9 @@ tbl_changed_targets <- tibble()
 
 # Looks like the simple way to do this comparison is with a for loop 
 # https://stackoverflow.com/questions/57742819/whats-a-tidyverse-approach-to-iterating-over-rows-in-a-data-frame-when-vectoris 
-# Quick way - use excel
+# Really quick way - use excel
 
-tsg_names <- unique(tbl_hb_hosp_qpi$Cancer)
+tsg_names <- unique(tbl_targets$Cancer)
 
 # NEEDS FURTHER WORK 
 # for each tsg 
@@ -68,12 +69,20 @@ tsg_names <- unique(tbl_hb_hosp_qpi$Cancer)
 # add to set of changed qpis
 # then add rows to output file
 
-# for each tsg
+# Extract a target for a tsg
+# Bladder, qpi3
+idx = "Bladder"
+bladder_targets <- tbl_targets |> 
+  filter(str_detect(idx, Cancer))
+bladder_targets
+
+
+# for each tsg 
 for (i in 1:nrow(tsg_names)) {
   # for each qpi in that tsg
-  qpis_for_this_tsg <- 
-  for () {
-    
+  qpis_for_this_tsg <- tbl_targets$QPI 
+  for (j in 1:nrow(qpis_for_this_tsg)) {
+    print("max: ", "???")
   }
   
   if (tbl_changed_targets[i, "Current_Target"] > tbl_tsg_characteristics[i] ) {
