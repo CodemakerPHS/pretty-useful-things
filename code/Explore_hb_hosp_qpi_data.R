@@ -8,12 +8,16 @@ library(readxl)
 library(dplyr) 
 library(officer)  
 library(tibble)
-library(stringr)
+library(stringr) 
+library(here)
+library(janitor)
 # and flextable? 
+
+path_to_data_on_stats = "/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/pw_hosp_data_exploration/"
 
 
 # Get background data 
-tbl_background_data_age_gender <- readxl::read_xlsx("/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/pw_hosp_data_exploration/input/Background_Data_Age_Gender.xlsx", 
+tbl_background_data_age_gender <- readxl::read_xlsx(str_c(path_to_data_on_stats, "input/Background_Data_Age_Gender.xlsx"), 
                                              sheet = "Background_Data_Age_Gender")
 
 summary(tbl_background_data_age_gender) 
@@ -51,8 +55,21 @@ summary(tbl_hb_hosp_qpi)
 
 # Targets > 1,900 rows using Feb 2024 data 
 tbl_targets <- tbl_hb_hosp_qpi |> 
-  select(Cancer, Cyear, QPI_Label_Short,QPI,  Current_Target, Target_Label, Direction) |> 
-  distinct()
+  select(Cancer, QPI_Label_Short, Cyear, QPI,  Current_Target, Target_Label, Direction) |> 
+  distinct() |>
+  arrange(Cancer, QPI_Label_Short, Cyear)
+
+write.csv(tbl_targets, str_c(path_to_data_on_stats, "/output/Summary_of_QPI_targets_data.csv"))
+# Warning - the above command writes an initial column containing row numbers into the file, with no header cell. 
+# ie empty A1 when viewed in Excel. 
+
+tbl_targets <- tbl_targets |> 
+  group_by(Cancer, QPI) |> 
+  # arrange(Cancer, QPI, Cyear) |>
+  # doesn't work
+  mutate(add_column( changed_target = summarise(max(Current_Target)) > summarise(min(Current_Target))))
+  
+
 
 tbl_changed_targets <- tibble()
 
