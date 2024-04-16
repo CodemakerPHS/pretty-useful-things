@@ -74,10 +74,12 @@ write.csv(tbl_altered_targets, str_c(path_to_data_on_stats, "/output/Altered_QPI
 tbl_detail_of_changed_targets <- tbl_targets |> 
   left_join(tbl_altered_targets) 
 
+# Capture the detail of the target value in each year, sorted appropriately... 
 tbl_detail_of_changed_targets <- tbl_detail_of_changed_targets |> 
   filter(target_changed == TRUE) |> 
   arrange(Cancer, QPI_Label_Short, Cyear)
 
+# ... and output to CSV for review in Excel
 write.csv(tbl_detail_of_changed_targets, str_c(path_to_data_on_stats, "/output/Detail_of_changed_targets.csv"))  
   
 # Looks like the simple way to do this comparison is with a for loop 
