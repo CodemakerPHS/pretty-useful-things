@@ -63,7 +63,14 @@ tsg_names <- unique(tbl_hb_hosp_qpi$Cancer)
 tbl_tsg_characteristics <- tibble(tsg_names)
 tbl_tsg_characteristics <- add_column(tbl_tsg_characteristics, maxi_target = 0.0)
 
-# NEEDS FURTHER WORK - FOR ROW, IF THE TGT IS > THE CORRES MAX FOR THAT TSG / QPI COMBO, 
+# NEEDS FURTHER WORK 
+# for each tsg 
+# for each qpi 
+# if max(tgt) > min(tgt)
+# add to set of changed qpis
+# then add rows to output file
+
+# - FOR ROW, IF THE TGT IS > THE CORRES MAX FOR THAT TSG / QPI COMBO, 
 # THEN SET NEW FLAG CHANGED TO YES, AND KEEP/ADD TO CHANGED TBL
 for (i in 1:nrow(tsg_names)) {
   if (tbl_changed_targets[i, "Current_Target"] > tbl_tsg_characteristics[i] ) {
