@@ -80,7 +80,10 @@ bladder_targets
 # for each tsg 
 for (i in 1:nrow(tsg_names)) {
   # for each qpi in that tsg
-  qpis_for_this_tsg <- tbl_targets$QPI 
+  qpis_for_this_tsg <- tbl_targets |> 
+    filter(str_detect(tsg_names[i], Cancer))
+  # error i
+  
   for (j in 1:nrow(qpis_for_this_tsg)) {
     print("max: ", "???")
   }
