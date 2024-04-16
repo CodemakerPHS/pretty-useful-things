@@ -22,10 +22,10 @@ unique(tbl_background_data_age_gender$Year_C)
 tbl_background_data_age_gender |> count(Year_C)
 
 # Get case ascertainment data 
-tbl_background_data_case <- readxl::read_xlsx("/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/pw_hosp_data_exploration/input/Background_Data_Case.xlsx", 
+tbl_bkgd_data_case <- readxl::read_xlsx("/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/pw_hosp_data_exploration/input/Background_Data_Case.xlsx", 
                                        sheet = "Background_Data_Case")
 
-summary(tbl_background_data_case)
+summary(tbl_bkgd_data_case)
 
 # Get hb_hosp file from:  
 # previously.. \Benchmarking\Cancer QPIs\Data\new_process\testing\test_bladder_24\excels_for_tableau\initial_run\input 
@@ -48,12 +48,12 @@ tbl_hb_hosp_qpi <- readxl::read_xlsx("/conf/quality_indicators/Benchmarking/Canc
 
 summary(tbl_hb_hosp_qpi)
 
+# Targets > 1,900 rows using Feb 2024 data 
 tbl_targets <- tbl_hb_hosp_qpi |> 
   select(Cancer, Cyear, QPI_Label_Short,QPI,  Current_Target, Target_Label, Direction) |> 
   distinct()
 
-tbl_changed_targets <- tbl_targets |> 
-  mutate(change_in_target = "not yet compared") 
+tbl_changed_targets <- tibble()
 
 # Looks like the simple way to do this comparison is with a for loop 
 # https://stackoverflow.com/questions/57742819/whats-a-tidyverse-approach-to-iterating-over-rows-in-a-data-frame-when-vectoris 
@@ -66,12 +66,10 @@ tbl_tsg_characteristics <- add_column(tbl_tsg_characteristics, maxi_target = 0.0
 # NEEDS FURTHER WORK 
 # for each tsg 
 # for each qpi 
-# if max(tgt) > min(tgt)
+# if max(tsg.qpi.tgt) > min(tsg.qpi.tgt)
 # add to set of changed qpis
 # then add rows to output file
 
-# - FOR ROW, IF THE TGT IS > THE CORRES MAX FOR THAT TSG / QPI COMBO, 
-# THEN SET NEW FLAG CHANGED TO YES, AND KEEP/ADD TO CHANGED TBL
 for (i in 1:nrow(tsg_names)) {
   if (tbl_changed_targets[i, "Current_Target"] > tbl_tsg_characteristics[i] ) {
     tbl_tsg_characteristics[i, ] <-  
