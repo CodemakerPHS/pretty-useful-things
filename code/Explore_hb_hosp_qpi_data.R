@@ -64,11 +64,9 @@ write.csv(tbl_targets, str_c(path_to_data_on_stats, "/output/Summary_of_QPI_targ
 # ie empty A1 when viewed in Excel. 
 
 tbl_targets <- tbl_targets |> 
-  group_by(Cancer, QPI) |> 
-  # arrange(Cancer, QPI, Cyear) |>
-  # doesn't work
-  mutate(add_column( changed_target = summarise(max(Current_Target)) > summarise(min(Current_Target))))
-  
+  group_by(Cancer, QPI_Label_Short) |> 
+  summarise(current_max = max(Current_Target), everything())
+
 
 
 tbl_changed_targets <- tibble()
