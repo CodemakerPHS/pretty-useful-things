@@ -75,8 +75,10 @@ tbl_detail_of_changed_targets <- tbl_targets |>
   left_join(tbl_altered_targets) 
 
 tbl_detail_of_changed_targets <- tbl_detail_of_changed_targets |> 
-  filter(target_changed == TRUE)
-  
+  filter(target_changed == TRUE) |> 
+  arrange(Cancer, QPI_Label_Short, Cyear)
+
+write.csv(tbl_detail_of_changed_targets, str_c(path_to_data_on_stats, "/output/Detail_of_changed_targets.csv"))  
   
 # Looks like the simple way to do this comparison is with a for loop 
 # https://stackoverflow.com/questions/57742819/whats-a-tidyverse-approach-to-iterating-over-rows-in-a-data-frame-when-vectoris 
