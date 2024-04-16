@@ -70,8 +70,14 @@ tbl_altered_targets <- tbl_targets |>
 
 write.csv(tbl_altered_targets, str_c(path_to_data_on_stats, "/output/Altered_QPI_targets.csv"))
 
-tbl_changed_targets <- tibble()
+# NOW- JOIN THE TARGETS TO THE TRUE ROWS, TO SEE DETAILS
+tbl_detail_of_changed_targets <- tbl_targets |> 
+  left_join(tbl_altered_targets) 
 
+tbl_detail_of_changed_targets <- tbl_detail_of_changed_targets |> 
+  filter(target_changed == TRUE)
+  
+  
 # Looks like the simple way to do this comparison is with a for loop 
 # https://stackoverflow.com/questions/57742819/whats-a-tidyverse-approach-to-iterating-over-rows-in-a-data-frame-when-vectoris 
 # Really quick way - use excel
