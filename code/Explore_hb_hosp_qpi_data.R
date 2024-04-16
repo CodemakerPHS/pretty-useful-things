@@ -60,8 +60,6 @@ tbl_changed_targets <- tibble()
 # Quick way - use excel
 
 tsg_names <- unique(tbl_hb_hosp_qpi$Cancer)
-tbl_tsg_characteristics <- tibble(tsg_names)
-tbl_tsg_characteristics <- add_column(tbl_tsg_characteristics, maxi_target = 0.0)
 
 # NEEDS FURTHER WORK 
 # for each tsg 
@@ -70,7 +68,14 @@ tbl_tsg_characteristics <- add_column(tbl_tsg_characteristics, maxi_target = 0.0
 # add to set of changed qpis
 # then add rows to output file
 
+# for each tsg
 for (i in 1:nrow(tsg_names)) {
+  # for each qpi in that tsg
+  qpis_for_this_tsg <- 
+  for () {
+    
+  }
+  
   if (tbl_changed_targets[i, "Current_Target"] > tbl_tsg_characteristics[i] ) {
     tbl_tsg_characteristics[i, ] <-  
   }
