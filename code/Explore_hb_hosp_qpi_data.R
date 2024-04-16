@@ -76,6 +76,16 @@ bladder_targets <- tbl_targets |>
   filter(str_detect(idx, Cancer))
 bladder_targets
 
+# use group_by? 
+# This should make it efficient to calc max and min by the different attributes
+# instead of a loop perhaps
+
+tbl_targets |> 
+  group_by(Cancer, QPI) 
+
+
+# for (i in 1:nrow())
+
 
 # for each tsg 
 for (i in 1:nrow(tsg_names)) {
