@@ -63,11 +63,12 @@ write.csv(tbl_targets, str_c(path_to_data_on_stats, "/output/Summary_of_QPI_targ
 # Warning - the above command writes an initial column containing row numbers into the file, with no header cell. 
 # ie empty A1 when viewed in Excel. 
 
-tbl_targets <- tbl_targets |> 
+tbl_altered_targets <- tbl_targets |> 
   group_by(Cancer, QPI_Label_Short) |> 
-  summarise(current_max = max(Current_Target), everything())
+  summarise(target_changed = max(Current_Target) > min(Current_Target), maxtgt = max(Current_Target), mintgt = min(Current_Target))
+# Lists TRUE for all combinations of cancer and QPI where the max is greater than min ie it has been altered 
 
-
+write.csv(tbl_altered_targets, str_c(path_to_data_on_stats, "/output/Altered_QPI_targets.csv"))
 
 tbl_changed_targets <- tibble()
 
