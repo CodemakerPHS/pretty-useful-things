@@ -44,7 +44,6 @@ You can also embed plots, for example:
 ```{r regional_network_bar_chart, echo=FALSE}
 # Import dummy data
 tbl_networks_bar_chart <- read_xlsx(here(path_to_test_data_on_stats, toenail_hb_hosp_filename), sheet = "QPI_performance")
-glimpse(tbl_networks_bar_chart) 
 
 ```
 
@@ -58,11 +57,11 @@ if (nrow(tbl_networks_bar_chart)<1){
   tbl_networks_bar_chart <- read_xlsx(here(path_to_data_on_stats, toenail_hb_hosp_filename), sheet = QPI_performance)
 }
 trend_plot <- tbl_networks_bar_chart |> 
-  select(Cancer, Cyear, QPI, PerPerformance, Network, Location, ) |> 
-  filter(str_detect(QPI, "QPI 84")) |> 
-  ggplot(aes(x=as.integer(Cyear), y=PerPerformance)) +
+  select(Cancer, Cyear, QPI, PerPerformance, Network, Location ) |> 
+  filter(str_detect( QPI, "QPI 84")) |> 
+  ggplot(aes(x=Cyear), y=PerPerformance)) +
   geom_line() +
-  facet_wrap(~ Location)
+  facet_wrap(~ Network)
 trend_plot
 ```
 
