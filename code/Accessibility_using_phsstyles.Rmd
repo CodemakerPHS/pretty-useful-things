@@ -1,0 +1,46 @@
+---
+title: "Making your R plots accessible with the phsstyles package"
+author: "Pauline Ward"
+date: "2024-04-30"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+The phsstyles package should make it easy to use the official PHS colour scheme
+in an accessible way in R plots. 
+
+Several examples are presented here, all using the 
+Toenail cancer Quality Performance Indicators dataset, 
+ie dummy tabular data produced for this tutorial. 
+
+## Population Pyramid
+
+
+```{r population_pyramid}
+# Import dummy data
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r regional_network_bar_chart, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot. 
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+## Appendix: Technical Information 
+```{r appendix tech info}
+sessionInfo()
+``` 
