@@ -35,6 +35,7 @@ ie dummy tabular data produced for this tutorial.
 
 ```{r population_pyramid}
 # Import dummy data
+# to follow
 
 
 ```
@@ -46,6 +47,7 @@ You can also embed plots, for example:
 ```{r regional_network_bar_chart, echo=FALSE}
 # Import dummy data
 tbl_networks_bar_chart <- read_xlsx(here(path_to_test_data_on_stats, toenail_hb_hosp_filename), sheet = "QPI_performance")
+# chart to follow
 
 ```
 
@@ -63,10 +65,12 @@ trend_plot <- tbl_networks_bar_chart |>
   select(Cancer, Cyear, QPI, PerPerformance, Network, Location ) |> 
   filter(str_detect( QPI, "84")) |> 
   filter(str_detect(Location, "NCA|WoSCAN|SCAN")) |> 
-  ggplot(aes(x=Cyear, y=PerPerformance)) +
-  geom_line() +
+  ggplot(aes(x=Cyear, y=PerPerformance, colour = Location) ) +
+  geom_line() + 
+  geom_point(shape = 23) +
   facet_wrap(~Network) +
-  labs(title = "Toenail dummy graph")
+  labs(title = "Toenail dummy graph") + 
+  scale_colour_discrete_phs(palette = "main")
 
   
 trend_plot 
