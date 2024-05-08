@@ -16,6 +16,7 @@ library(stringr)
 ## File location for importing dummy data
 path_to_test_data_on_stats <- "/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/test_data/" 
 toenail_hb_hosp_filename <- "Toenail_HB_Hosp_QPI_anonymised.xlsx"
+tbl_networks_bar_chart <- tibble()
 
 ```
 
@@ -54,12 +55,12 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 ```{r qpi_trend_lines_faceted}
 # Import dummy data
 if (nrow(tbl_networks_bar_chart)<1){
-  tbl_networks_bar_chart <- read_xlsx(here(path_to_data_on_stats, toenail_hb_hosp_filename), sheet = QPI_performance)
+  tbl_networks_bar_chart <- read_xlsx(here(path_to_test_data_on_stats, toenail_hb_hosp_filename), sheet = "QPI_performance")
 }
 trend_plot <- tbl_networks_bar_chart |> 
   select(Cancer, Cyear, QPI, PerPerformance, Network, Location ) |> 
-  filter(str_detect( QPI, "QPI 84")) |> 
-  ggplot(aes(x=Cyear), y=PerPerformance)) +
+  filter(str_detect( QPI, "84")) |> 
+  ggplot(aes(x=Cyear, y=PerPerformance)) +
   geom_line() +
   facet_wrap(~ Network)
 trend_plot
