@@ -11,6 +11,7 @@ library(here)
 library(readxl)
 library(dplyr)
 library(ggplot2)
+library(stringr)
 
 ## File location for importing dummy data
 path_to_test_data_on_stats <- "/conf/quality_indicators/Benchmarking/Cancer QPIs/Data/new_process/testing/test_data/" 
@@ -57,6 +58,8 @@ if (nrow(tbl_networks_bar_chart)<1){
   tbl_networks_bar_chart <- read_xlsx(here(path_to_data_on_stats, toenail_hb_hosp_filename), sheet = QPI_performance)
 }
 trend_plot <- tbl_networks_bar_chart |> 
+  select(Cancer, Cyear, QPI, PerPerformance, Network, Location, ) |> 
+  filter(str_detect(QPI, "QPI 84")) |> 
   ggplot(aes(x=as.integer(Cyear), y=PerPerformance)) +
   geom_line() +
   facet_wrap(~ Location)
