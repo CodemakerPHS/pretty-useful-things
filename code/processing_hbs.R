@@ -27,6 +27,11 @@ hb_bounds_url <- "https://maps.gov.scot/ATOM/shapefiles/SG_NHS_HealthBoards_2019
 # As the above is a Shapefile, just store the url for now. 
 # Probably won't use these in R, cos Tableau maps them for me. 
 
-# Get HB populations 
-hb_popn_url <- "https://www.opendata.nhs.scot/dataset/7f010430-6ce1-4813-b25c-f7f335bdc4dc/resource/27a72cc8-d6d8-430c-8b4f-3109a9ceadb1/download/hb2019_pop_est_15072022.csv"
+# Get HB populations
+
+# estimates for mid-year 2022, published June 2024
+hb_popn_url <- "https://www.opendata.nhs.scot/dataset/7f010430-6ce1-4813-b25c-f7f335bdc4dc/resource/27a72cc8-d6d8-430c-8b4f-3109a9ceadb1/download/hb2019_pop_est_26032024.csv"
+
+# old file, earlier year
+# hb_popn_url <- "https://www.opendata.nhs.scot/dataset/7f010430-6ce1-4813-b25c-f7f335bdc4dc/resource/27a72cc8-d6d8-430c-8b4f-3109a9ceadb1/download/hb2019_pop_est_15072022.csv"
 hb_popn_tbl <- read_csv(hb_popn_url) 
