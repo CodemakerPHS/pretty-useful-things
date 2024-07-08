@@ -41,8 +41,11 @@ hb_popn_url <- "https://www.opendata.nhs.scot/dataset/7f010430-6ce1-4813-b25c-f7
 # hb_popn_url <- "https://www.opendata.nhs.scot/dataset/7f010430-6ce1-4813-b25c-f7f335bdc4dc/resource/27a72cc8-d6d8-430c-8b4f-3109a9ceadb1/download/hb2019_pop_est_15072022.csv"
 hb_popn_tbl <- read_csv(hb_popn_url) 
 latest_year <- max(unique(hb_popn_tbl$Year))
+hb_popn_tbl <- hb_popn_tbl |>
+  left_join(hb_names_tbl, by = "HB")
+
 hb_popn_tbl_latest <- hb_popn_tbl |> 
-  select(Year, HB, Sex, AllAges) |> 
+  select(Year, HBName, Sex, AllAges, HB) |> 
   filter(Year == latest_year) |> 
   filter(Sex == "All")
 #  filter(HB != Scotland_str)
@@ -54,3 +57,4 @@ Scot_popn <- hb_popn_tbl_latest |>
 kbl(hb_popn_tbl_latest)
 sum_of_hb_popns <- sum(hb_popn_tbl_latest$AllAges) - Scot_popn$AllAges
 sum_of_hb_popns
+
