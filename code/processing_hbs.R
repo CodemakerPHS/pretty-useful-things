@@ -9,6 +9,7 @@ library(readr)
 library(dplyr)
 library(kableExtra)
 library(stringr)
+library(here)
 
 # Code for Scotland among Health Board codes
 Scotland_str <- "S92000003"
@@ -58,3 +59,5 @@ kbl(hb_popn_tbl_latest)
 sum_of_hb_popns <- sum(hb_popn_tbl_latest$AllAges) - Scot_popn$AllAges
 sum_of_hb_popns
 
+# Write out CSV. NB gitignore will direct this file to not be uploaded
+write_csv(hb_popn_tbl_latest, here("data", "health_board_populations.csv"))
