@@ -6,6 +6,12 @@
 
 
 library(readr)
+library(dplyr)
+library(kableExtra)
+library(stringr)
+
+# Code for Scotland among Health Board codes
+Scotland_str <- "S92000003"
 
 # Get data 
 
@@ -25,7 +31,6 @@ hb_names_tbl <- read_csv(hb_names_url)
 # from Scottish govt spatial data website https://spatialdata.gov.scot/geonetwork/srv/api/records/f12c3826-4b4b-40e6-bf4f-77b9ed01dc14
 hb_bounds_url <- "https://maps.gov.scot/ATOM/shapefiles/SG_NHS_HealthBoards_2019.zip"
 # As the above is a Shapefile, just store the url for now. 
-# Probably won't use these in R, cos Tableau maps them for me. 
 
 # Get HB populations
 
@@ -35,3 +40,17 @@ hb_popn_url <- "https://www.opendata.nhs.scot/dataset/7f010430-6ce1-4813-b25c-f7
 # old file, earlier year
 # hb_popn_url <- "https://www.opendata.nhs.scot/dataset/7f010430-6ce1-4813-b25c-f7f335bdc4dc/resource/27a72cc8-d6d8-430c-8b4f-3109a9ceadb1/download/hb2019_pop_est_15072022.csv"
 hb_popn_tbl <- read_csv(hb_popn_url) 
+latest_year <- max(unique(hb_popn_tbl$Year))
+hb_popn_tbl_latest <- hb_popn_tbl |> 
+  select(Year, HB, Sex, AllAges) |> 
+  filter(Year == latest_year) |> 
+  filter(Sex == "All")
+#  filter(HB != Scotland_str)
+
+Scot_popn <- hb_popn_tbl_latest |> 
+  filter(HB == Scotland_str) |> 
+  select(AllAges)
+  
+kbl(hb_popn_tbl_latest)
+sum_of_hb_popns <- sum(hb_popn_tbl_latest$AllAges) - Scot_popn$AllAges
+sum_of_hb_popns
