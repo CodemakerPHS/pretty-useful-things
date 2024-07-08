@@ -54,10 +54,17 @@ hb_popn_tbl_latest <- hb_popn_tbl |>
 Scot_popn <- hb_popn_tbl_latest |> 
   filter(HB == Scotland_str) |> 
   select(AllAges)
+Scot_popn <- Scot_popn$AllAges
   
 kbl(hb_popn_tbl_latest)
-sum_of_hb_popns <- sum(hb_popn_tbl_latest$AllAges) - Scot_popn$AllAges
+sum_of_hb_popns <- sum(hb_popn_tbl_latest$AllAges) - Scot_popn
 sum_of_hb_popns
+
+hb_popn_tbl_latest <- hb_popn_tbl_latest |>
+  mutate(Popn_as_a_percent_of_Scotland = AllAges / Scot_popn) |>
+  select(HBName, Population = AllAges, Popn_as_a_percent_of_Scotland, Year, Sex, HB_code = HB)
+
+  
 
 # Write out CSV. NB gitignore will direct this file to not be uploaded
 write_csv(hb_popn_tbl_latest, here("data", "health_board_populations.csv"))
