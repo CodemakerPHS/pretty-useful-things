@@ -7,13 +7,10 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE) 
-library(here) 
-library(readxl)
 library(dplyr)
-library(ggplot2)
-library(stringr)
-library(phsstyles)
 library(phsopendata)
+library(openxlsx)
+library(here)
 
 ```
 
@@ -39,11 +36,14 @@ tbl_Council_Areas <- get_resource(
 tbl_Council_Areas <- tbl_Council_Areas |>
   filter(is.na(CADateArchived))
 
-```
+write.xlsx(tbl_Council_Areas, "Council_names_and_codes.xlsx") 
 
+```
+## Local authority council area names
+I have all the councils ```{r tbl_Council_areas$CAName}``` right here. 
 
 ```{r get_and_filter_data, echo=TRUE}
-councils_of_interest <- c("East Renfrewshire")
+councils_of_interest <- c("East Renfrewshire", "Aberdeenshire")
 
 ## Address for importing mortality data 
 ## ... from https://www.opendata.nhs.scot/dataset/cancer-mortality/resource/eebc8f38-7297-4bdc-a417-69ce3e2e6d44
@@ -67,7 +67,13 @@ this_data <- this_data |>
 # this_data is a tibble
 class(this_data)
 
+# Add Council Area names to the data
+this_data <- this_data |>
+  left_join(tbl_Council_Areas, by = "CA")
 
+# Filter to the council area(s) of interest
+tbl_relevant_data <- this_data |>
+  filter(CAName %in% councils_of_interest)
 
 ```
 
