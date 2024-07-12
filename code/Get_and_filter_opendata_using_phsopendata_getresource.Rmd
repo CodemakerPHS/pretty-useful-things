@@ -1,0 +1,27 @@
+---
+title: "Get and filter open data using phsopendata getresource()"
+author: "Pauline Ward"
+date: "2024-07-24"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+library(here) 
+library(readxl)
+library(dplyr)
+library(ggplot2)
+library(stringr)
+library(phsstyles)
+library(phsopendata)
+
+## Address for importing mortality data 
+## ... from https://www.opendata.nhs.scot/dataset/cancer-mortality/resource/eebc8f38-7297-4bdc-a417-69ce3e2e6d44
+
+# ID of dataset: mortality by council area
+resource_id <- "eebc8f38-7297-4bdc-a417-69ce3e2e6d44" 
+# this_data <- get_resource_sql()
+this_data <- get_resource(resource_id)
+```
+
+# Introduction
