@@ -15,21 +15,55 @@ library(stringr)
 library(phsstyles)
 library(phsopendata)
 
+```
+
+# Getting data using phsopendata 
+
+Cancer mortality data is available from opendata.nhs.scot. 
+
+Data is filtered by year and site during the download step. 
+
+Then I've done a join on the local authority (East Renfrewshire in the first 
+instance), so that I can select LA 
+transparently by name, rather than hardwiring in a code. 
+
+```{r get_council_areas, echo=TRUE}
+# Geographic data - local authority council areas
+# https://www.opendata.nhs.scot/dataset/geography-codes-and-labels/resource/967937c4-8d67-4f39-974f-fd58c4acfda5
+Councils_resource_id <- "967937c4-8d67-4f39-974f-fd58c4acfda5"
+tbl_Council_Areas <- get_resource(
+  Councils_resource_id, 
+  col_select = c("_id", "CA", "CAName", "CADateArchived")
+)
+
+tbl_Council_Areas <- tbl_Council_Areas |>
+  filter(is.na(CADateArchived))
+
+```
+
+
+```{r get_and_filter_data, echo=TRUE}
 ## Address for importing mortality data 
 ## ... from https://www.opendata.nhs.scot/dataset/cancer-mortality/resource/eebc8f38-7297-4bdc-a417-69ce3e2e6d44
 
 # ID of dataset: mortality by council area
 resource_id <- "eebc8f38-7297-4bdc-a417-69ce3e2e6d44" 
 # this_data <- get_resource_sql()
-this_data <- get_resource(resource_id, 
+this_data <- get_resource(
+  resource_id, 
                           # comment out col_select, to just get all the columns
                           # col_select = c("CA", "CancerSiteICD10Code", "CancerSite", "Sex", "Year", "DeathsAllAges")
-                          row_filters = list(
-                            #CA = "????",
-                            Year = "2020", 
-                            CancerSite = "Breast"
-                          )
-                          )
+  row_filters = list(
+                    Year = "2020", 
+                    CancerSite = "Breast"
+  )
+)
+
+# this_data is a tibble
+class(this_data)
+
+
+
 ```
 
-# Introduction
+# Results
