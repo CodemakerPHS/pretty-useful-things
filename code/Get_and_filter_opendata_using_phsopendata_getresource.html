@@ -641,16 +641,19 @@ class(this_data)</code></pre>
 <pre><code>## [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
 <pre class="r"><code># Add Council Area names to the data
 this_data &lt;- this_data |&gt;
-  left_join(tbl_Council_Areas, by = &quot;CA&quot;)
+  left_join(tbl_Council_Areas, by = &quot;CA&quot;) 
 
 # Filter to the council area(s) of interest
-tbl_relevant_data &lt;- this_data |&gt;
-  filter(CAName %in% councils_of_interest)</code></pre>
+tbl_relevant_data &lt;- this_data |&gt; 
+  filter(CAName %in% councils_of_interest) |&gt;
+  mutate(Council_area_name = CAName, Cancer_site = CancerSite, Year_of_diagnosis = Year) |&gt;
+  select(Council_area_name, Cancer_site, Year_of_diagnosis, everything()) |&gt;
+  select(!c(CAName, CancerSite, Year)) </code></pre>
 </div>
 </div>
 <div id="results" class="section level1">
 <h1>Results</h1>
-<pre class="r"><code># kable_classic style
+<pre class="r"><code># kable styling style
 tbl_Council_Areas |&gt;
   kbl() |&gt; 
   kable_styling(&quot;hover&quot;, &quot;condensed&quot;)</code></pre>
@@ -1023,13 +1026,22 @@ NA
 </tr>
 </tbody>
 </table>
-<pre class="r"><code>#kable_classic style
+<pre class="r"><code>#kable styling
 tbl_relevant_data |&gt;
   kbl() |&gt;
-  kable_paper(&quot;hover&quot;, &quot;condensed&quot;)</code></pre>
-<table class=" lightable-paper lightable-hover" style="color: black; font-family: condensed; margin-left: auto; margin-right: auto;">
+  kable_styling(&quot;hover&quot;, &quot;condensed&quot;)</code></pre>
+<table class="table table-hover" style="color: black; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
+<th style="text-align:left;">
+Council_area_name
+</th>
+<th style="text-align:left;">
+Cancer_site
+</th>
+<th style="text-align:right;">
+Year_of_diagnosis
+</th>
 <th style="text-align:left;">
 CA
 </th>
@@ -1037,16 +1049,10 @@ CA
 CancerSiteICD10Code
 </th>
 <th style="text-align:left;">
-CancerSite
-</th>
-<th style="text-align:left;">
 Sex
 </th>
 <th style="text-align:left;">
 SexQF
-</th>
-<th style="text-align:right;">
-Year
 </th>
 <th style="text-align:right;">
 DeathsAllAges
@@ -1099,9 +1105,6 @@ SMRLower95pcConfidenceInterval
 <th style="text-align:right;">
 SMRUpper95pcConfidenceInterval
 </th>
-<th style="text-align:left;">
-CAName
-</th>
 <th style="text-align:right;">
 CADateArchived
 </th>
@@ -1110,22 +1113,25 @@ CADateArchived
 <tbody>
 <tr>
 <td style="text-align:left;">
+Aberdeenshire
+</td>
+<td style="text-align:left;">
+Breast
+</td>
+<td style="text-align:right;">
+2020
+</td>
+<td style="text-align:left;">
 S12000034
 </td>
 <td style="text-align:left;">
 C50
 </td>
 <td style="text-align:left;">
-Breast
-</td>
-<td style="text-align:left;">
 All
 </td>
 <td style="text-align:left;">
 d
-</td>
-<td style="text-align:right;">
-2020
 </td>
 <td style="text-align:right;">
 42
@@ -1174,14 +1180,20 @@ d
 <td style="text-align:right;">
 123.0249
 </td>
-<td style="text-align:left;">
-Aberdeenshire
-</td>
 <td style="text-align:right;">
 NA
 </td>
 </tr>
 <tr>
+<td style="text-align:left;">
+East Renfrewshire
+</td>
+<td style="text-align:left;">
+Breast
+</td>
+<td style="text-align:right;">
+2020
+</td>
 <td style="text-align:left;">
 S12000011
 </td>
@@ -1189,16 +1201,10 @@ S12000011
 C50
 </td>
 <td style="text-align:left;">
-Breast
-</td>
-<td style="text-align:left;">
 All
 </td>
 <td style="text-align:left;">
 d
-</td>
-<td style="text-align:right;">
-2020
 </td>
 <td style="text-align:right;">
 24
@@ -1246,9 +1252,6 @@ d
 </td>
 <td style="text-align:right;">
 188.9753
-</td>
-<td style="text-align:left;">
-East Renfrewshire
 </td>
 <td style="text-align:right;">
 NA

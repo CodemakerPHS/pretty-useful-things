@@ -74,11 +74,14 @@ class(this_data)
 
 # Add Council Area names to the data
 this_data <- this_data |>
-  left_join(tbl_Council_Areas, by = "CA")
+  left_join(tbl_Council_Areas, by = "CA") 
 
 # Filter to the council area(s) of interest
-tbl_relevant_data <- this_data |>
-  filter(CAName %in% councils_of_interest)
+tbl_relevant_data <- this_data |> 
+  filter(CAName %in% councils_of_interest) |>
+  mutate(Council_area_name = CAName, Cancer_site = CancerSite, Year_of_diagnosis = Year) |>
+  select(Council_area_name, Cancer_site, Year_of_diagnosis, everything()) |>
+  select(!c(CAName, CancerSite, Year)) 
 
 ```
 
