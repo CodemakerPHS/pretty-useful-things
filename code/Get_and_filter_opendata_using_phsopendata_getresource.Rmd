@@ -34,7 +34,8 @@ tbl_Council_Areas <- get_resource(
 )
 
 tbl_Council_Areas <- tbl_Council_Areas |>
-  filter(is.na(CADateArchived))
+  filter(is.na(CADateArchived)) |>
+  unique()
 
 write.xlsx(tbl_Council_Areas, "Council_names_and_codes.xlsx") 
 
