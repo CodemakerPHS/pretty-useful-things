@@ -11,6 +11,7 @@ library(dplyr)
 library(phsopendata)
 library(openxlsx)
 library(here)
+library(kableExtra)
 
 ```
 
@@ -43,7 +44,10 @@ write.xlsx(tbl_Council_Areas, "Council_names_and_codes.xlsx")
 ## Local authority council area names
 I have all the councils ```{r tbl_Council_areas$CAName}``` right here. 
 
-```{r get_and_filter_data, echo=TRUE}
+```{r get_and_filter_data, echo=TRUE} 
+# Vector with all the councils to be extracted from the data
+# I've added an extra one, to future-proof the code, 
+# allow me to select multiple councils in one run. 
 councils_of_interest <- c("East Renfrewshire", "Aberdeenshire")
 
 ## Address for importing mortality data 
@@ -78,4 +82,17 @@ tbl_relevant_data <- this_data |>
 
 ```
 
-# Results
+# Results 
+```{r produce_tables, echo=TRUE}
+
+# kable styling style
+tbl_Council_Areas |>
+  kbl() |> 
+  kable_styling("hover", "condensed")
+
+#kable styling
+tbl_relevant_data |>
+  kbl() |>
+  kable_styling("hover", "condensed")
+
+```
