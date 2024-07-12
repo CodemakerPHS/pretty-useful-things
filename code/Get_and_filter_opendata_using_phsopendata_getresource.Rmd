@@ -43,6 +43,8 @@ tbl_Council_Areas <- tbl_Council_Areas |>
 
 
 ```{r get_and_filter_data, echo=TRUE}
+councils_of_interest <- c("East Renfrewshire")
+
 ## Address for importing mortality data 
 ## ... from https://www.opendata.nhs.scot/dataset/cancer-mortality/resource/eebc8f38-7297-4bdc-a417-69ce3e2e6d44
 
@@ -58,6 +60,9 @@ this_data <- get_resource(
                     CancerSite = "Breast"
   )
 )
+
+this_data <- this_data |>
+  filter(Sex == "All")
 
 # this_data is a tibble
 class(this_data)
