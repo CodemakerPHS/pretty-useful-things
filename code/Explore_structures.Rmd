@@ -1,0 +1,107 @@
+---
+title: "Exploring_structures"
+author: "PW"
+date: "2024-08-09"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(stringr)
+
+
+```
+
+## R Markdown for data
+
+
+
+
+```{r hospitals}
+
+# Vector of qpi names
+qpi_vector <- c("Mindfulness support available", "Music therapy available", "Books", "TV")
+qpi_vector[c(2,4)]
+qpi_vector[3] <- "Reading material"
+qpi_vector
+# bad ways to print output
+print(c("Here we have ", length(qpi_vector), " things.\n"))
+print(paste0(qpi_vector[1:length(qpi_vector)]))
+print(cat(qpi_vector))
+# good ways to print output
+str_c(qpi_vector[1], qpi_vector[4], "ooft", sep = "... a wee gap...")
+# with newlines
+cat(str_c(qpi_vector[1], qpi_vector[4], "ooft", sep = "... a wee gap... and newline \n"))
+
+for (x in qpi_vector){
+  print(x)
+}
+
+
+# Make a struc to keep details on hospitals
+# name, code, avg beds, number of bus stops, cycle parking, number of cafes, non-smoking, 
+# staff, depts, lat, long
+
+# list representing one hospital
+hosp_list <- list()
+xlent_hosp <- list("Excellent hospital", "X808X", 2340.7665, 7, 17, 4, TRUE)
+xlent_hosp[5]
+xlent_hosp[c(1,3:5)]
+xlent_hosp[1] <- "Most Excellent Hospital"
+xlent_hosp
+# remove the cafes 
+xlent_hosp[-6]
+xlent_hosp
+# Is the code present? 
+"X808H" %in% xlent_hosp
+"X808X" %in% xlent_hosp
+for(x in xlent_hosp){
+  print(x)
+}
+
+# data.table
+
+
+
+
+```
+
+```{r health_boards}
+
+# Make a struc to keep details on HBs
+# bounds?, name, code, avg beds, number of cafes, number of bus stops, cycle parking, staff, depts
+
+# factor
+
+
+
+# matrix 
+# Must be two-dimensional, and all the same data type. 
+# Uses less mem than data frame, but cannot be passed into ggplot. 
+# In 99% of cases, tibble/df will be more convenient. 
+# But some forms of linear algebra need a matrix. 
+performance_2018 <- matrix(c(99.1, 89.3, 77, 92.5, 95.6, 
+                             98.012345, 88.80, 75.2, 90.09, 95.4
+                             ),
+                           nrow = 2,
+                           ncol = 5
+                           )
+
+for (rows in 1:nrow(thismatrix)) {
+  for (columns in 1:ncol(thismatrix)) {
+    print(thismatrix[rows, columns])
+  }
+}
+
+
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r popns}
+# plot(pressure)
+```
+
