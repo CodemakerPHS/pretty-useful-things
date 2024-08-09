@@ -10,6 +10,8 @@ knitr::opts_chunk$set(echo = TRUE)
 library(stringr)
 library(tibble)
 library(dplyr)
+library(ggplot2)
+library(phsstyles)
 
 ```
 
@@ -77,10 +79,10 @@ simple_qpi_df[3]
 simple_qpi_df 
 
 # Store qpi performance in tibble
-
-performance_tbl <- tibble(        "QPI no." = c("6", "7", "8(ii)", "8(iii)", "9", "10", "11", "12", "13"),
+# with deliberate bad values
+performance_tbl <- tibble(        "QPI no." = c("6", "7", "8(ii)", "8(iii)", "9", "10", "", "12", "12"),
                             numerator_value = c(151, 152, 153, 154, 155, 156, 157, 158, 159),
-                          denominator_value = c(170, 178, 178, 178, 177, 161, 164, 170, 170),
+                          denominator_value = c(170, 178, 178, 178, 177, 161, 164, 0, 170),
                              numerator_text = c("Like strawberry ice cream", "Wear blue slippers?","Wear stripey pyjamas",
                                                 "Read the paper", "Do sudoku", "Play chess", 
                                                 "Get out for a walk each day", "Tai chi", "Judo") 
@@ -99,7 +101,7 @@ performance_percent <- performance_tbl |>
 ```{r health_boards}
 
 # Make a struc to keep details on HBs
-# bounds?, name, code, avg beds, number of cafes, number of bus stops, cycle parking, staff, depts
+# bounds maybe, name, code, avg beds, number of cafes, number of bus stops, cycle parking, staff, depts
 
 # factor
 
@@ -134,7 +136,21 @@ for (rows in 1:nrow(performance_2018_matrix)) {
 
 You can also embed plots, for example:
 
-```{r popns}
-# plot(pressure)
+```{r check_data}
+# Look for missing values
+plot_bar_chart <- performance_percent |>
+  ggplot(aes(x = `QPI no.`, y = perform_pc)) +
+  geom_col() +
+  theme_phs()
+plot_bar_chart
+
+# Look for outliers
+plot_for_outliers <- performance_percent |>
+  ggplot(aes(x=denominator_value, y=numerator_value)) +
+  geom_point(shape = 17) +
+  theme_phs()
+plot_for_outliers
+
+
 ```
 
