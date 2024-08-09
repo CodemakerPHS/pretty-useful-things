@@ -8,13 +8,12 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(stringr)
-
+library(tibble)
+library(dplyr)
 
 ```
 
-## R Markdown for data
-
-
+# QPI and hospital data in a vector and a list
 
 
 ```{r hospitals}
@@ -59,12 +58,43 @@ for(x in xlent_hosp){
   print(x)
 }
 
-# data.table
-
-
-
-
 ```
+# QPI and hospital data in data.table perhaps
+
+```{r qpi_tabular_strux}
+
+# Make a simple data frame
+simple_qpi_df <- data.frame("QPI no." = c("1(i)", "1(ii)", "1(iii)", "3", "4(i)", "4(ii)", "5"),
+                            Numerator_value = c(55, 8, 34, 101, 2, 10, 16),
+                            Location = c("Leith Royal Infirmary", "Dr Helen's", "Golden Jubilee", "SRI", "Leith Royal Infirmary", "SRI", "SRI"))
+names(simple_qpi_df)
+str(simple_qpi_df)
+ncol(simple_qpi_df)
+nrow(simple_qpi_df)
+
+simple_qpi_df$QPI.no.
+simple_qpi_df[3]
+simple_qpi_df 
+
+# Store qpi performance in tibble
+
+performance_tbl <- tibble(        "QPI no." = c("6", "7", "8(ii)", "8(iii)", "9", "10", "11", "12", "13"),
+                            numerator_value = c(151, 152, 153, 154, 155, 156, 157, 158, 159),
+                          denominator_value = c(170, 178, 178, 178, 177, 161, 164, 170, 170),
+                             numerator_text = c("Like strawberry ice cream", "Wear blue slippers?","Wear stripey pyjamas",
+                                                "Read the paper", "Do sudoku", "Play chess", 
+                                                "Get out for a walk each day", "Tai chi", "Judo") 
+                             )
+                      
+names(performance_tbl)
+str(performance_tbl)
+class(performance_tbl)
+performance_tbl$numerator_text[5]
+performance_percent <- performance_tbl |>
+  mutate(perform_pc = numerator_value / denominator_value)
+```
+
+# Health board or performance data in a matrix, not an array
 
 ```{r health_boards}
 
@@ -80,20 +110,23 @@ for(x in xlent_hosp){
 # Uses less mem than data frame, but cannot be passed into ggplot. 
 # In 99% of cases, tibble/df will be more convenient. 
 # But some forms of linear algebra need a matrix. 
-performance_2018 <- matrix(c(99.1, 89.3, 77, 92.5, 95.6, 
+performance_2018_matrix <- matrix(c(99.1, 89.3, 77, 92.5, 95.6, 
                              98.012345, 88.80, 75.2, 90.09, 95.4
                              ),
                            nrow = 2,
                            ncol = 5
                            )
 
-for (rows in 1:nrow(thismatrix)) {
-  for (columns in 1:ncol(thismatrix)) {
-    print(thismatrix[rows, columns])
+for (rows in 1:nrow(performance_2018_matrix)) {
+  for (columns in 1:ncol(performance_2018_matrix)) {
+    print(performance_2018_matrix[rows, columns])
   }
 }
 
-
+# array
+# Like a matrix, ie all elements of the same type, 
+# but can have numerous dimensions
+# Might try to find a use-case. No rush. 
 
 ```
 
