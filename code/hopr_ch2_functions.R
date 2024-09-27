@@ -35,3 +35,6 @@ args(ggplot)
 args(str_detect)
 ?round_half_up
 ?str_detect
+
+# 2.4 Writing your own functions 
+
