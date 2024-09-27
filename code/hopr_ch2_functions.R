@@ -38,3 +38,11 @@ args(str_detect)
 
 # 2.4 Writing your own functions 
 
+# The example function from the book, but with a name I've chosen
+roll_two_dice <- function() {
+  # I like my explanatory comments
+  die <- 1:6
+  dice <- sample(die, size = 2, replace = TRUE)
+  sum(dice)
+}
+roll_two_dice()
