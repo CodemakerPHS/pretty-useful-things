@@ -12,7 +12,7 @@ fruit_n_veg_df <- read_csv("data/Fy76fg6oEemYdRIT0BhLtg_17af74a00ea811e9903947c5
                           cancer = col_character(), 
                           fruit = col_double(), veg = col_double()))
 
-notes_output_filename <- "notes_EDA_fruit_consumption_data.md"
+notes_output_filename <- "notes_EDA_fruit_consumption_data.txt"
 #file_conn <- file(notes_output_filename)
 sink(notes_output_filename, append = FALSE)
 print("Dataset comprises 66 observations of 9 variables. ")
