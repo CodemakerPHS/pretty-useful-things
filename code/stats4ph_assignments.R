@@ -31,7 +31,12 @@ cancer_data_for_MOOC_1_1_df$smoking
 # ... so, to see nulls, you need to set an arg to not exclude nulls
 table(cancer_data_for_MOOC_1_1_df$smoking, exclude = NULL)
 # Plotting
-hist(cancer_data_for_MOOC_1_1_df$age)
+hist(cancer_data_for_MOOC_1_1_df$age) 
+
+# Create new, derived column
+head(cancer_data_for_MOOC_1_1_df, 12)
+cancer_data_for_MOOC_1_1_df$fruits_et_legumes <- cancer_data_for_MOOC_1_1_df$fruit + cancer_data_for_MOOC_1_1_df$veg
+head(cancer_data_for_MOOC_1_1_df, 7)
 
 output_lines <- append(output_lines, 
                        c("Age min ", min(fruit_n_veg_df$age), 
