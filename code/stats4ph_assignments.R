@@ -13,36 +13,37 @@ fruit_n_veg_df <- read_csv("data/Fy76fg6oEemYdRIT0BhLtg_17af74a00ea811e9903947c5
                           fruit = col_double(), veg = col_double()))
 
 notes_output_filename <- "notes_EDA_fruit_consumption_data.txt"
-#file_conn <- file(notes_output_filename)
-sink(notes_output_filename, append = FALSE)
-print("Dataset comprises 66 observations of 9 variables. ")
 
-# Adjust sink() to not overwrite the info already written to it. 
-sink(notes_output_filename, append = TRUE)
-print("This dataset uses integer for age, whereas we treat age as an ordinal categorical variable, using age groups.")
+output_lines <- c("Dataset comprises 66 observations of 9 variables. ", 
+                 "This dataset uses integer for age, whereas we treat age as an ordinal categorical variable, using age groups.",
+                 "Fields...: ")
+
 # glimpse(fruit_n_veg_df)
+# Glimpse produces too much output. 
 
-print("Minimum age: ")
-min(fruit_n_veg_df$age)
-print("Maximum age:")
-max(fruit_n_veg_df$age)
-print("Values for gender: ")
-unique(fruit_n_veg_df$gender)
-print("Exercise:")
-unique(fruit_n_veg_df$exercise)
-print("Fruit, min and max")
-min(fruit_n_veg_df$fruit)
-max(fruit_n_veg_df$veg)
-print("Fruit, veg, sum of fruit and veg, more than 5?")
+output_lines <- append(output_lines, 
+                       c("Age min ", min(fruit_n_veg_df$age), 
+                             "Age max ", max(fruit_n_veg_df$age),
+                          "Values for gender: ",  unique(fruit_n_veg_df$gender),  
+                       "Exercise:", unique(fruit_n_veg_df$exercise)))
 
-print("Smoking")
-unique(fruit_n_veg_df$smoking)
-print("BMI summary")
-# not summarise(fruit_n_veg_df) just says tibble 1x0
-# not glimpse(fruit_n_veg) too lengthy
-summary(fruit_n_veg_df)
+output_lines <- append(output_lines, 
+                       c("Fruit, min and max",
+                         min(fruit_n_veg_df$fruit), " ",
+                         max(fruit_n_veg_df$fruit)
+                         
+                       )
+  
+)
 
+output_lines <- append(output_lines, summary(fruit_n_veg_df))
 
+file_conn <- file(notes_output_filename)
+
+write_lines(output_lines, 
+            file_conn,
+            sep ="\n",
+            append = FALSE)
 
 # Course 3, logistic regression, uses CSV file with many variables, 
 # diabetes data
