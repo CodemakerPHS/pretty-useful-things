@@ -23,9 +23,9 @@ output_lines <- c("Dataset comprises 66 observations of 9 variables. ",
 
 output_lines <- append(output_lines, 
                        c("Age min ", min(fruit_n_veg_df$age), 
-                             "Age max ", max(fruit_n_veg_df$age),
+                          "Age max ", max(fruit_n_veg_df$age),
                           "Values for gender: ",  unique(fruit_n_veg_df$gender),  
-                       "Exercise:", unique(fruit_n_veg_df$exercise)))
+                          "Exercise:", unique(fruit_n_veg_df$exercise)))
 
 output_lines <- append(output_lines, 
                        c("Fruit, min and max",
@@ -35,6 +35,20 @@ output_lines <- append(output_lines,
                        )
   
 )
+
+# get_summary_continuous_varbl <- function(varbl_name, varbl_vector) {
+#   
+#   output_text <- c(varbl_name, ": ")
+#  # output_text <- append(output_text, c("Min ", min(varbl_vector)))
+#   
+#   
+#   return output_text
+# }
+
+unique(fruit_n_veg_df$exercise)
+fruit_n_veg_df <- fruit_n_veg_df |>
+  mutate(exercise = as_factor(exercise))
+
 
 output_lines <- append(output_lines, summary(fruit_n_veg_df))
 
