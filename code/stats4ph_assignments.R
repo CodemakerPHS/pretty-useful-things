@@ -23,6 +23,23 @@ output_lines <- c("Dataset comprises 66 observations of 9 variables. ",
 # Glimpse produces too much output. 
 # Probably better with summary()
 
+# Produce descriptive statistics
+summary(cancer_data_for_MOOC_1_1_df$bmi)
+
+# Tabulation 
+table(cancer_data_for_MOOC_1_1_df$smoking)
+# Warning! table() (Base R) does not display nulls
+cancer_data_for_MOOC_1_1_df$smoking
+# ... so, to see nulls, you need to set an arg to not exclude nulls
+table(cancer_data_for_MOOC_1_1_df$smoking, exclude = NULL)
+# Plotting
+hist(cancer_data_for_MOOC_1_1_df$age) 
+
+# Create new, derived column
+head(cancer_data_for_MOOC_1_1_df, 12)
+cancer_data_for_MOOC_1_1_df$fruits_et_legumes <- cancer_data_for_MOOC_1_1_df$fruit + cancer_data_for_MOOC_1_1_df$veg
+head(cancer_data_for_MOOC_1_1_df, 7)
+
 output_lines <- append(output_lines, 
                        c("Age min ", min(fruit_n_veg_df$age), 
                           "Age max ", max(fruit_n_veg_df$age),
