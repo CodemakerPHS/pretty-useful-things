@@ -21,6 +21,7 @@ output_lines <- c("Dataset comprises 66 observations of 9 variables. ",
 
 # glimpse(fruit_n_veg_df)
 # Glimpse produces too much output. 
+# Probably better with summary()
 
 output_lines <- append(output_lines, 
                        c("Age min ", min(fruit_n_veg_df$age), 
@@ -60,9 +61,11 @@ write_lines(output_lines,
             sep ="\n",
             append = FALSE) 
 
+table(fruit_n_veg_df$cancer, exclude = NULL)
+
 # ifelse(test, yes, no)
 # five_a_day becomes equal to ... if fruit&veg >= 5, 'yes', else 'no'
-fruit_n_veg_df$five_a_day <- ifelse(fruit_n_veg_df$fruits)
+fruit_n_veg_df$five_a_day <- ifelse(fruit_n_veg_df$fruitset )
 
 # Course 3, logistic regression, uses CSV file with many variables, 
 # diabetes data
