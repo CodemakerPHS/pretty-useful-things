@@ -92,7 +92,11 @@ hist(fruit_n_veg_df$fruits_et_legumes, # plot histogram of sum of fruit n veg da
 
 tutti_frutti_plot <- fruit_n_veg_df |>
   ggplot() + 
-  geom_histogram(aes(x=fruits_et_legumes), binwidth = 1, fill = "#83BB26") # phs-green #83BB26
-tutti_frutti_plot
+  geom_histogram(aes(x=fruits_et_legumes), binwidth = 1, fill = "#83BB26", col = "#000000") + # phs-green #83BB26 
+  labs(x = "Portions of fruit and vegetables", y = "Frequency")
+
+  
+  tutti_frutti_plot
+
 # Course 3, logistic regression, uses CSV file with many variables, 
 # diabetes data
