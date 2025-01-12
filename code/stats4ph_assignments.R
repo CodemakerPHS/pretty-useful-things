@@ -82,7 +82,7 @@ table(fruit_n_veg_df$cancer, exclude = NULL)
 
 # ifelse(test, yes, no)
 # five_a_day becomes equal to ... if fruit&veg >= 5, 'yes', else 'no'
-fruit_n_veg_df$five_a_day <- ifelse(fruit_n_veg_df$fruitset )
+fruit_n_veg_df$five_a_day <- ifelse(fruit_n_veg_df$fruits_et_legumes >=5, "yes", "no" )
 
 # Course 3, logistic regression, uses CSV file with many variables, 
 # diabetes data
