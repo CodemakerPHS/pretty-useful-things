@@ -1,5 +1,6 @@
 # My code for doing the work in the assignments in the Coursera specialisation 
 # Stats with R for Public Health 
+# Not using Markdown cos we're on the verge of installing Quart, shd be better I hope. 
 
 library(tidyverse)
 
@@ -20,23 +21,20 @@ output_lines <- c("Dataset comprises 66 observations of 9 variables. ",
 
 # glimpse(fruit_n_veg_df)
 # Glimpse produces too much output. 
+# Probably better with summary()
 
 # Produce descriptive statistics
-summary(cancer_data_for_MOOC_1_1_df$bmi)
+summary(fruit_n_veg_df$bmi)
 
 # Tabulation 
-table(cancer_data_for_MOOC_1_1_df$smoking)
+table(fruit_n_veg_df$smoking)
 # Warning! table() (Base R) does not display nulls
-cancer_data_for_MOOC_1_1_df$smoking
+fruit_n_veg_df$smoking
 # ... so, to see nulls, you need to set an arg to not exclude nulls
-table(cancer_data_for_MOOC_1_1_df$smoking, exclude = NULL)
+table(fruit_n_veg_df$smoking, exclude = NULL)
 # Plotting
-hist(cancer_data_for_MOOC_1_1_df$age) 
+hist(fruit_n_veg_df$age) 
 
-# Create new, derived column
-head(cancer_data_for_MOOC_1_1_df, 12)
-cancer_data_for_MOOC_1_1_df$fruits_et_legumes <- cancer_data_for_MOOC_1_1_df$fruit + cancer_data_for_MOOC_1_1_df$veg
-head(cancer_data_for_MOOC_1_1_df, 7)
 
 output_lines <- append(output_lines, 
                        c("Age min ", min(fruit_n_veg_df$age), 
@@ -74,7 +72,42 @@ file_conn <- file(notes_output_filename)
 write_lines(output_lines, 
             file_conn,
             sep ="\n",
-            append = FALSE)
+            append = FALSE) 
+
+table(fruit_n_veg_df$cancer, exclude = NULL)
+
+# Create new, derived column
+head(fruit_n_veg_df, 12)
+fruit_n_veg_df$fruits_et_legumes <- fruit_n_veg_df$fruit + fruit_n_veg_df$veg
+head(fruit_n_veg_df, 7)
+
+
+# ifelse(test, yes, no)
+# five_a_day becomes equal to ... if fruit&veg >= 5, 'yes', else 'no'
+fruit_n_veg_df$five_a_day <- ifelse(fruit_n_veg_df$fruits_et_legumes >=5, "yes", "no" ) 
+fruit_n_veg_df$five_a_day
+table(fruit_n_veg_df$five_a_day)
+
+hist(fruit_n_veg_df$fruits_et_legumes, # plot histogram of sum of fruit n veg daily consumption
+     xlab = "Portions of fruit and vegetables inc broccoli",
+     main = "Daily combined consumption of fruit inc kiwi and vegetables")
+
+tutti_frutti_plot <- fruit_n_veg_df |>
+  ggplot() + 
+  geom_histogram(aes(x=fruits_et_legumes), binwidth = 1, fill = "#83BB26", col = "#000000") + # phs-green #83BB26 
+  labs(x = "Portions of fruit and vegetables", y = "Frequency") + 
+  scale_x_continuous(breaks = seq(from = 0, to = 12, by = 1))
+
+  
+  tutti_frutti_plot
+  
+# Dichotomise the bmi variable 
+  fruit_n_veg_df <- fruit_n_veg_df |>
+    mutate(bmi_normal = if_else((bmi >= 18.5 & bmi <= 25), TRUE, FALSE))
+  
+  table(fruit_n_veg_df$bmi_normal)
+  # false: 40
+  # true: 26
 
 # Course 3, logistic regression, uses CSV file with many variables, 
 # diabetes data
