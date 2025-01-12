@@ -93,7 +93,8 @@ hist(fruit_n_veg_df$fruits_et_legumes, # plot histogram of sum of fruit n veg da
 tutti_frutti_plot <- fruit_n_veg_df |>
   ggplot() + 
   geom_histogram(aes(x=fruits_et_legumes), binwidth = 1, fill = "#83BB26", col = "#000000") + # phs-green #83BB26 
-  labs(x = "Portions of fruit and vegetables", y = "Frequency")
+  labs(x = "Portions of fruit and vegetables", y = "Frequency") +
+  scale_x_continuous(breaks = seq(from = 0, to = 12, by = 1))
 
   
   tutti_frutti_plot
