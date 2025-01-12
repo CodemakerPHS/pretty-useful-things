@@ -100,6 +100,11 @@ tutti_frutti_plot <- fruit_n_veg_df |>
 
   
   tutti_frutti_plot
+  
+# Dichotomise the bmi variable 
+  fruit_n_veg_df <- fruit_n_veg_df |>
+    mutate(bmi_normal = if_else((bmi >= 18.5 & bmi <= 25), TRUE, FALSE))
+  
 
 # Course 3, logistic regression, uses CSV file with many variables, 
 # diabetes data
