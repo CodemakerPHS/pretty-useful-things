@@ -1,5 +1,6 @@
 # My code for doing the work in the assignments in the Coursera specialisation 
 # Stats with R for Public Health 
+# Not using Markdown cos we're on the verge of installing Quart, shd be better I hope. 
 
 library(tidyverse)
 
@@ -57,7 +58,11 @@ file_conn <- file(notes_output_filename)
 write_lines(output_lines, 
             file_conn,
             sep ="\n",
-            append = FALSE)
+            append = FALSE) 
+
+# ifelse(test, yes, no)
+# five_a_day becomes equal to ... if fruit&veg >= 5, 'yes', else 'no'
+fruit_n_veg_df$five_a_day <- ifelse(fruit_n_veg_df$fruits)
 
 # Course 3, logistic regression, uses CSV file with many variables, 
 # diabetes data
