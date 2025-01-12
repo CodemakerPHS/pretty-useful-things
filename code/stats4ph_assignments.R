@@ -35,10 +35,6 @@ table(fruit_n_veg_df$smoking, exclude = NULL)
 # Plotting
 hist(fruit_n_veg_df$age) 
 
-# Create new, derived column
-head(fruit_n_veg_df, 12)
-fruit_n_veg_df$fruits_et_legumes <- fruit_n_veg_df$fruit + fruit_n_veg_df$veg
-head(fruit_n_veg_df, 7)
 
 output_lines <- append(output_lines, 
                        c("Age min ", min(fruit_n_veg_df$age), 
@@ -80,6 +76,12 @@ write_lines(output_lines,
 
 table(fruit_n_veg_df$cancer, exclude = NULL)
 
+# Create new, derived column
+head(fruit_n_veg_df, 12)
+fruit_n_veg_df$fruits_et_legumes <- fruit_n_veg_df$fruit + fruit_n_veg_df$veg
+head(fruit_n_veg_df, 7)
+
+
 # ifelse(test, yes, no)
 # five_a_day becomes equal to ... if fruit&veg >= 5, 'yes', else 'no'
 fruit_n_veg_df$five_a_day <- ifelse(fruit_n_veg_df$fruits_et_legumes >=5, "yes", "no" ) 
@@ -93,7 +95,7 @@ hist(fruit_n_veg_df$fruits_et_legumes, # plot histogram of sum of fruit n veg da
 tutti_frutti_plot <- fruit_n_veg_df |>
   ggplot() + 
   geom_histogram(aes(x=fruits_et_legumes), binwidth = 1, fill = "#83BB26", col = "#000000") + # phs-green #83BB26 
-  labs(x = "Portions of fruit and vegetables", y = "Frequency") +
+  labs(x = "Portions of fruit and vegetables", y = "Frequency") + 
   scale_x_continuous(breaks = seq(from = 0, to = 12, by = 1))
 
   
