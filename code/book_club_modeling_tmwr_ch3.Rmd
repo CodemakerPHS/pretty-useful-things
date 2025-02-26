@@ -1,0 +1,30 @@
+---
+title: "TMWR Chapter 3 fundamentals"
+author: "PW"
+date: "2025-02-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Modeling / Modelling with Base R
+Analytical Book Club - [https://www.tmwr.org/base-r](Tidy Modeling With R), by Max Kuhn and Julia Silge
+
+```{r tilde_with_linear_model_for_linear_regression}
+
+
+```
+
+## Including Plots
+
+In this scatter plot, the model is the line. And the line is the model.  
+
+```{r graphing_the_model, echo=FALSE}
+plot(pressure)
+```
+
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
