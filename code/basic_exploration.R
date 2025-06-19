@@ -19,6 +19,8 @@ source(exploration_functions.R)
 
 input_file_location <- "../../input_data"
 output_file_location <- "../../output"
+# below is broken
+test_data_location <- 'Q:/Data/new_process/testing/test_data/walters_borrowed_data_from_book'
 
 
 # Call the function to import the file and generate a tibble from it, 
